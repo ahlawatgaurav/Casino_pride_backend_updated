@@ -1,0 +1,1502 @@
+info: ===> TimeStamp : 2025-11-27 06:07:32===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:07:32===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/"}
+info: ===> TimeStamp : 2025-11-27 06:14:40===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:14:40===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/favicon.ico"}
+info: ===> TimeStamp : 2025-11-27 06:33:35===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:35===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.git/config"}
+info: ===> TimeStamp : 2025-11-27 06:33:35===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:35===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:35===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:35===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env.local"}
+info: ===> TimeStamp : 2025-11-27 06:33:35===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:35===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env.dev"}
+info: ===> TimeStamp : 2025-11-27 06:33:36===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:36===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env.prod"}
+info: ===> TimeStamp : 2025-11-27 06:33:36===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:36===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env.staging"}
+info: ===> TimeStamp : 2025-11-27 06:33:36===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:36===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env.development"}
+info: ===> TimeStamp : 2025-11-27 06:33:36===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:36===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env.production"}
+info: ===> TimeStamp : 2025-11-27 06:33:37===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:37===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env.test"}
+info: ===> TimeStamp : 2025-11-27 06:33:37===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:37===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env.backup"}
+info: ===> TimeStamp : 2025-11-27 06:33:37===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:37===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env~"}
+info: ===> TimeStamp : 2025-11-27 06:33:37===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:37===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env.sample"}
+info: ===> TimeStamp : 2025-11-27 06:33:38===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:38===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:38===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:38===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:38===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:38===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:38===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:38===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env.orig"}
+info: ===> TimeStamp : 2025-11-27 06:33:39===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:39===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env.swp"}
+info: ===> TimeStamp : 2025-11-27 06:33:39===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:39===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env.tmp"}
+info: ===> TimeStamp : 2025-11-27 06:33:39===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:39===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/.env.dist"}
+info: ===> TimeStamp : 2025-11-27 06:33:39===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:39===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/admin/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:40===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:40===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/admin/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:40===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:40===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/admin/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:40===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:40===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/admin/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:40===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:40===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/api/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:41===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:41===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/api/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:41===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:41===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/api/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:41===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:41===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/api/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:41===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:41===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/app/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:42===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:42===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/app/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:42===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:42===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/app/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:42===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:42===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/app/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:42===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:42===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/config/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:43===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:43===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/config/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:43===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:43===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/config/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:43===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:43===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/config/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:43===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:43===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/src/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:44===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:44===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/src/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:44===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:44===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/src/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:44===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:44===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/src/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:45===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:45===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/public/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:45===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:45===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/public/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:45===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:45===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/public/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:45===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:45===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/public/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:46===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:46===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/assets/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:46===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:46===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/assets/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:46===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:46===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/assets/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:46===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:46===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/assets/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:47===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:47===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/includes/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:47===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:47===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/includes/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:47===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:47===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/includes/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:47===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:47===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/includes/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:48===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:48===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/lib/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:48===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:48===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/lib/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:48===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:48===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/lib/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:48===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:48===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/lib/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:49===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:49===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/application/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:49===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:49===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/application/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:49===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:49===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/application/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:49===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:49===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/application/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:50===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:50===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/system/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:50===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:50===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/system/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:50===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:50===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/system/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:50===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:50===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/system/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:51===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:51===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/core/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:51===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:51===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/core/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:51===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:51===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/core/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:51===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:51===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/core/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:52===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:52===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/modules/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:52===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:52===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/modules/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:52===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:52===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/modules/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:52===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:52===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/modules/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:53===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:53===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/plugins/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:53===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:53===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/plugins/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:53===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:53===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/plugins/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:53===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:53===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/plugins/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:54===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:54===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/themes/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:54===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:54===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/themes/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:54===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:54===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/themes/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:54===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:54===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/themes/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:55===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:55===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/vendor/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:55===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:55===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/vendor/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:55===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:55===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/vendor/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:55===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:55===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/vendor/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:56===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:56===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/storage/.env"}
+info: ===> TimeStamp : 2025-11-27 06:33:56===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:56===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/storage/.env.save"}
+info: ===> TimeStamp : 2025-11-27 06:33:56===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:56===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/storage/.env.bak"}
+info: ===> TimeStamp : 2025-11-27 06:33:56===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:56===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/storage/.env.old"}
+info: ===> TimeStamp : 2025-11-27 06:33:57===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:57===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/phpinfo.php"}
+info: ===> TimeStamp : 2025-11-27 06:33:57===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:57===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/_profiler/phpinfo"}
+info: ===> TimeStamp : 2025-11-27 06:33:57===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:57===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/info.php"}
+info: ===> TimeStamp : 2025-11-27 06:33:57===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:57===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/php_info.php"}
+info: ===> TimeStamp : 2025-11-27 06:33:58===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:58===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/phpinfo"}
+info: ===> TimeStamp : 2025-11-27 06:33:58===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:58===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/test.php"}
+info: ===> TimeStamp : 2025-11-27 06:33:58===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:58===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/info1.php"}
+info: ===> TimeStamp : 2025-11-27 06:33:58===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:58===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/info2.php"}
+info: ===> TimeStamp : 2025-11-27 06:33:59===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:59===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/php.php"}
+info: ===> TimeStamp : 2025-11-27 06:33:59===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:59===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/pi.php"}
+info: ===> TimeStamp : 2025-11-27 06:33:59===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:59===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/i.php"}
+info: ===> TimeStamp : 2025-11-27 06:33:59===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:33:59===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/phpversion.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:00===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:00===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/php_version.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:00===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:00===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/serverinfo.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:00===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:00===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/server.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:00===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:00===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/debug.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:01===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:01===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/diagnostic.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:01===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:01===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/phptest.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:01===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:01===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/check.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:01===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:01===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/phpinfo.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:02===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:02===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/info.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:02===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:02===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/php_info.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:02===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:02===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/test.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:02===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:02===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/phpinfo.php.bak"}
+info: ===> TimeStamp : 2025-11-27 06:34:03===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:03===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/info.php.bak"}
+info: ===> TimeStamp : 2025-11-27 06:34:03===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:03===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/php_info.php.bak"}
+info: ===> TimeStamp : 2025-11-27 06:34:03===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:03===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/test.php.bak"}
+info: ===> TimeStamp : 2025-11-27 06:34:03===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:03===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/phpinfo.php.old"}
+info: ===> TimeStamp : 2025-11-27 06:34:04===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:04===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/info.php.old"}
+info: ===> TimeStamp : 2025-11-27 06:34:04===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:04===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/php_info.php.old"}
+info: ===> TimeStamp : 2025-11-27 06:34:04===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:04===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/test.php.old"}
+info: ===> TimeStamp : 2025-11-27 06:34:04===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:04===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/phpinfo.php.orig"}
+info: ===> TimeStamp : 2025-11-27 06:34:05===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:05===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/info.php.orig"}
+info: ===> TimeStamp : 2025-11-27 06:34:05===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:05===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/php_info.php.orig"}
+info: ===> TimeStamp : 2025-11-27 06:34:05===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:05===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/test.php.orig"}
+info: ===> TimeStamp : 2025-11-27 06:34:05===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:05===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/phpinfo.php.backup"}
+info: ===> TimeStamp : 2025-11-27 06:34:06===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:06===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/info.php.backup"}
+info: ===> TimeStamp : 2025-11-27 06:34:06===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:06===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/php_info.php.backup"}
+info: ===> TimeStamp : 2025-11-27 06:34:06===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:06===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/test.php.backup"}
+info: ===> TimeStamp : 2025-11-27 06:34:06===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:06===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/phpinfo.php~"}
+info: ===> TimeStamp : 2025-11-27 06:34:07===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:07===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/info.php~"}
+info: ===> TimeStamp : 2025-11-27 06:34:07===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:07===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/php_info.php~"}
+info: ===> TimeStamp : 2025-11-27 06:34:07===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:07===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/test.php~"}
+info: ===> TimeStamp : 2025-11-27 06:34:07===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:07===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/phpinfo.php.swp"}
+info: ===> TimeStamp : 2025-11-27 06:34:08===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:08===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/info.php.swp"}
+info: ===> TimeStamp : 2025-11-27 06:34:08===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:08===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/php_info.php.swp"}
+info: ===> TimeStamp : 2025-11-27 06:34:08===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:08===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/test.php.swp"}
+info: ===> TimeStamp : 2025-11-27 06:34:08===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:08===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/phpinfo.php.tmp"}
+info: ===> TimeStamp : 2025-11-27 06:34:09===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:09===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/info.php.tmp"}
+info: ===> TimeStamp : 2025-11-27 06:34:09===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:09===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/php_info.php.tmp"}
+info: ===> TimeStamp : 2025-11-27 06:34:09===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:09===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/test.php.tmp"}
+info: ===> TimeStamp : 2025-11-27 06:34:09===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:09===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/admin/phpinfo.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:10===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:10===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/admin/info.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:10===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:10===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/admin/phpinfo.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:10===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:10===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/admin/info.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:10===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:10===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/test/phpinfo.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:11===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:11===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/test/info.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:11===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:11===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/test/phpinfo.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:11===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:11===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/test/info.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:11===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:11===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/dev/phpinfo.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:12===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:12===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/dev/info.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:12===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:12===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/dev/phpinfo.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:12===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:12===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/dev/info.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:12===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:12===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/tmp/phpinfo.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:13===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:13===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/tmp/info.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:13===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:13===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/tmp/phpinfo.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:13===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:13===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/tmp/info.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:13===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:13===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/includes/phpinfo.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:14===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:14===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/includes/info.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:14===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:14===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/includes/phpinfo.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:14===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:14===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/includes/info.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:14===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:14===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/scripts/phpinfo.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:15===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:15===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/scripts/info.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:15===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:15===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/scripts/phpinfo.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:15===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:15===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/scripts/info.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:15===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:15===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/cgi-bin/phpinfo.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:16===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:16===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/cgi-bin/info.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:16===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:16===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/cgi-bin/phpinfo.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:16===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:16===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/cgi-bin/info.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:16===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:16===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/public/phpinfo.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:17===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:17===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/public/info.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:17===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:17===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/public/phpinfo.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:17===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:17===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/public/info.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:17===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:17===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/web/phpinfo.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:18===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:18===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/web/info.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:18===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:18===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/web/phpinfo.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:18===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:18===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/web/info.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:19===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:19===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/www/phpinfo.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:19===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:19===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/www/info.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:19===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:19===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/www/phpinfo.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:19===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:19===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/www/info.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:20===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:20===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/site/phpinfo.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:20===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:20===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/site/info.php"}
+info: ===> TimeStamp : 2025-11-27 06:34:20===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:20===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/site/phpinfo.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:20===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:20===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/site/info.php.save"}
+info: ===> TimeStamp : 2025-11-27 06:34:21===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:34:21===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/"}
+info: ===> TimeStamp : 2025-11-27 06:44:36===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:44:36===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 06:44:36===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 06:44:36===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 06:44:36===> API : /api/auth/logout ===> Message : logoutUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 06:44:36===> API : /api/auth/logout ===> Message : logoutUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 06:44:36===> API : /api/auth/logout ===> Message : logoutUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 06:44:36===> API : /api/auth/logout ===> Message : logoutUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 06:44:36===> API : /api/auth/logout ===> Message : logoutUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 06:50:11===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 06:50:11===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 06:50:11===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 06:50:11===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 06:50:11===> API : /api/auth/logout ===> Message : logoutUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 06:50:11===> API : /api/auth/logout ===> Message : logoutUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 06:50:11===> API : /api/auth/logout ===> Message : logoutUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 06:50:11===> API : /api/auth/logout ===> Message : logoutUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 06:50:11===> API : /api/auth/logout ===> Message : logoutUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : /api/auth/checkIP ===> Message : checkIP() invoked!!
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : /api/auth/checkIP ===> Message : IPs match: 103.225.102.194
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : /api/auth/checkIP ===> Message : checkIPResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : /api/auth/checkIP ===> Message : checkIPResponse() completed
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 07:11:47===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : /api/auth/checkIP ===> Message : checkIP() invoked!!
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : /api/auth/checkIP ===> Message : IPs match: 103.255.182.117
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : /api/auth/checkIP ===> Message : checkIPResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : /api/auth/checkIP ===> Message : checkIPResponse() completed
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 07:12:04===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 07:51:22===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 07:51:22===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/robots.txt"}
+info: ===> TimeStamp : 2025-11-27 07:51:22===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 07:51:22===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/enhancecp"}
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 07:55:37===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 08:07:18===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 08:07:18===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 08:07:18===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 08:07:18===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 08:07:18===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 08:07:18===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 08:07:18===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 08:07:19===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 08:07:19===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 08:07:19===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 08:07:19===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 08:07:19===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 08:07:19===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 08:07:19===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 08:07:19===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 08:07:19===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 08:07:19===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 08:07:19===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 08:11:09===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 08:11:09===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 08:11:09===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 08:11:09===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 08:11:09===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 08:11:09===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 08:11:09===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : /api/auth/checkIP ===> Message : checkIP() invoked!!
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : /api/auth/checkIP ===> Message : IPs match: 103.225.102.194
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : /api/auth/checkIP ===> Message : checkIPResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : /api/auth/checkIP ===> Message : checkIPResponse() completed
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 08:11:10===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 09:43:37===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 09:43:37===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/"}
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 11:15:22===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 11:39:11===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 11:39:11===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 11:39:11===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 11:39:11===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 11:39:11===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 11:39:11===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 11:39:11===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 11:39:11===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 11:39:11===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 11:39:11===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 11:39:11===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 11:39:12===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 11:39:12===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 11:39:12===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 11:39:12===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 11:39:12===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 11:39:12===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 11:39:12===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 11:42:12===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 11:42:12===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 11:42:12===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 11:42:12===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 11:42:12===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 11:42:12===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 11:42:12===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 11:42:12===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 11:42:12===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 11:42:12===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 11:42:12===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 11:42:12===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 11:42:12===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 11:42:12===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 11:42:12===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 11:42:12===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 11:42:13===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 11:42:13===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 12:11:06===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 13:53:07===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 14:01:09===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 14:38:42===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 14:38:42===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/"}
+info: ===> TimeStamp : 2025-11-27 14:38:48===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 14:38:48===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/favicon.ico"}
+info: ===> TimeStamp : 2025-11-27 14:49:35===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 14:49:35===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 14:49:35===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 14:49:35===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 14:49:35===> API : /api/auth/logout ===> Message : logoutUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 14:49:35===> API : /api/auth/logout ===> Message : logoutUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 14:49:35===> API : /api/auth/logout ===> Message : logoutUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 14:49:35===> API : /api/auth/logout ===> Message : logoutUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 14:49:35===> API : /api/auth/logout ===> Message : logoutUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : /api/auth/checkIP ===> Message : checkIP() invoked!!
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : /api/auth/checkIP ===> Message : IPs match: 103.225.102.194
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : /api/auth/checkIP ===> Message : checkIPResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 14:49:45===> API : /api/auth/checkIP ===> Message : checkIPResponse() completed
+info: ===> TimeStamp : 2025-11-27 14:49:46===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 14:49:46===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 14:49:46===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 14:49:46===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 14:49:46===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 14:49:46===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 14:49:46===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 14:49:46===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 14:49:46===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 14:49:55===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 14:49:55===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 14:49:55===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 14:49:55===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 14:49:55===> API : /api/auth/logout ===> Message : logoutUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 14:49:55===> API : /api/auth/logout ===> Message : logoutUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 14:49:55===> API : /api/auth/logout ===> Message : logoutUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 14:49:55===> API : /api/auth/logout ===> Message : logoutUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 14:49:55===> API : /api/auth/logout ===> Message : logoutUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 15:02:53===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : /api/auth/checkIP ===> Message : checkIP() invoked!!
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : /api/auth/checkIP ===> Message : IPs match: 103.255.182.117
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : /api/auth/checkIP ===> Message : checkIPResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : /api/auth/checkIP ===> Message : checkIPResponse() completed
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 15:10:44===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 16:06:42===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 16:06:42===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/robots.txt"}
+info: ===> TimeStamp : 2025-11-27 16:06:43===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 16:06:43===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/"}
+info: ===> TimeStamp : 2025-11-27 16:36:44===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 16:36:44===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/"}
+info: ===> TimeStamp : 2025-11-27 16:37:48===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 16:37:48===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/sitemap.xml"}
+info: ===> TimeStamp : 2025-11-27 16:37:51===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 16:37:51===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/favicon.ico"}
+info: ===> TimeStamp : 2025-11-27 16:47:45===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 16:47:45===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 16:47:45===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 16:47:45===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 16:47:45===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 16:47:45===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 16:47:45===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 16:47:45===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 16:47:45===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 16:47:45===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 16:47:45===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 16:47:45===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 16:47:45===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 16:47:45===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 16:47:45===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 16:47:45===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 16:47:46===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 16:47:46===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 16:47:53===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 16:47:53===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 16:47:53===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 16:47:53===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 16:47:53===> API : /api/auth/logout ===> Message : logoutUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 16:47:53===> API : /api/auth/logout ===> Message : logoutUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 16:47:53===> API : /api/auth/logout ===> Message : logoutUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 16:47:53===> API : /api/auth/logout ===> Message : logoutUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 16:47:53===> API : /api/auth/logout ===> Message : logoutUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 16:47:56===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 16:48:01===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 16:48:01===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 16:48:01===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 16:48:01===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 16:48:01===> API : /api/auth/logout ===> Message : logoutUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 16:48:01===> API : /api/auth/logout ===> Message : logoutUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 16:48:01===> API : /api/auth/logout ===> Message : logoutUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 16:48:01===> API : /api/auth/logout ===> Message : logoutUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 16:48:01===> API : /api/auth/logout ===> Message : logoutUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 17:26:56===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 17:26:56===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/"}
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 17:49:38===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 18:01:24===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 18:01:24===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 18:01:24===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 18:01:24===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 18:01:24===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 18:01:24===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 18:01:24===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 18:01:24===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 18:01:24===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 18:01:24===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 18:01:24===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 18:01:24===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 18:01:24===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 18:01:24===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 18:01:24===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 18:01:24===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 18:01:25===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 18:01:25===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 18:02:58===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 18:02:58===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 18:02:58===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 18:02:58===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 18:02:58===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 18:02:58===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 18:02:58===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 18:02:58===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 18:02:58===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 18:02:59===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 18:02:59===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 18:02:59===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 18:02:59===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 18:02:59===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 18:02:59===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 18:02:59===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 18:02:59===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 18:02:59===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 18:03:03===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 18:29:15===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 18:42:44===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 18:42:44===> API : null ===> Message : validateRequest() Error:: Invalid Request :: 
+      {"apiUri":"/pdown"}
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 18:48:16===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 18:52:28===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 19:05:46===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 19:20:28===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 19:31:27===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 19:32:48===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 19:32:48===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 19:32:48===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 19:32:48===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 19:32:48===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 19:32:48===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 19:32:48===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 19:32:48===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 19:32:48===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 19:32:49===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 19:32:49===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 19:32:49===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 19:32:49===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 19:32:49===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 19:32:49===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 19:32:49===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 19:32:49===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 19:32:49===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 19:40:58===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 19:44:20===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 19:46:20===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 21:18:34===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 21:23:53===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 21:23:53===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 21:23:53===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 21:23:53===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 21:23:53===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 21:23:53===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 21:23:53===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 21:23:53===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 21:23:53===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 21:23:53===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 21:23:53===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 21:23:53===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 21:23:53===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 21:23:53===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 21:23:53===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 21:23:53===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 21:23:54===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 21:23:54===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 21:49:04===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 21:49:04===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 21:49:04===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 21:49:05===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 21:49:05===> API : /api/auth/logout ===> Message : logoutUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 21:49:05===> API : /api/auth/logout ===> Message : logoutUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 21:49:05===> API : /api/auth/logout ===> Message : logoutUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 21:49:05===> API : /api/auth/logout ===> Message : logoutUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 21:49:05===> API : /api/auth/logout ===> Message : logoutUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 21:53:02===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 21:53:02===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 21:53:02===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 21:53:02===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 21:53:02===> API : /api/auth/logout ===> Message : logoutUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 21:53:02===> API : /api/auth/logout ===> Message : logoutUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 21:53:02===> API : /api/auth/logout ===> Message : logoutUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 21:53:02===> API : /api/auth/logout ===> Message : logoutUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 21:53:02===> API : /api/auth/logout ===> Message : logoutUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : /api/auth/checkIP ===> Message : checkIP() invoked!!
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : /api/auth/checkIP ===> Message : IPs match: 103.225.102.194
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : /api/auth/checkIP ===> Message : checkIPResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : /api/auth/checkIP ===> Message : checkIPResponse() completed
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 21:53:09===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 21:54:06===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 21:54:06===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 21:54:06===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 21:54:06===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 21:54:06===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 21:54:06===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 21:54:06===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 21:54:06===> API : /api/auth/validateuser ===> Message : validateUserDB() :: Error :: {"code":"ER_SIGNAL_EXCEPTION","errno":1644,"sqlState":"10005","sqlMessage":"User Does Not Exist","sql":"CALL usp_validate_user('rakshali', 'rakshali@!2')"}
+info: ===> TimeStamp : 2025-11-27 21:54:06===> API : /api/auth/validateuser ===> Message : validateUserDBResult :: Error :: {"ErrorCode":10005,"ErrorMessage":"User Does Not Exist"}
+info: ===> TimeStamp : 2025-11-27 21:54:06===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 21:54:06===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 21:54:14===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 21:54:14===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 21:54:14===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 21:54:14===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 21:54:14===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 21:54:14===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 21:54:14===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 21:54:14===> API : /api/auth/validateuser ===> Message : validateUserDB() :: Error :: {"code":"ER_SIGNAL_EXCEPTION","errno":1644,"sqlState":"10005","sqlMessage":"User Does Not Exist","sql":"CALL usp_validate_user('rakshali', 'rakshali@!2')"}
+info: ===> TimeStamp : 2025-11-27 21:54:14===> API : /api/auth/validateuser ===> Message : validateUserDBResult :: Error :: {"ErrorCode":10005,"ErrorMessage":"User Does Not Exist"}
+info: ===> TimeStamp : 2025-11-27 21:54:14===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 21:54:14===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 21:54:22===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 21:54:22===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : /api/auth/checkIP ===> Message : checkIP() invoked!!
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : /api/auth/checkIP ===> Message : IPs match: 103.255.182.117
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : /api/auth/checkIP ===> Message : checkIPResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : /api/auth/checkIP ===> Message : checkIPResponse() completed
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 21:54:23===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 22:11:35===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 22:11:35===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 22:11:35===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 22:11:36===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 22:11:36===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 22:11:36===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 22:11:36===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 22:11:36===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 22:11:36===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 22:11:36===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 22:11:36===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 22:11:36===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 22:11:36===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 22:11:36===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 22:11:36===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 22:11:36===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 22:11:36===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 22:11:36===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : /api/auth/checkIP ===> Message : checkIP() invoked!!
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : /api/auth/checkIP ===> Message : IPs match: 103.225.102.194
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : /api/auth/checkIP ===> Message : checkIPResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : /api/auth/checkIP ===> Message : checkIPResponse() completed
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 22:24:16===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : /api/auth/checkIP ===> Message : checkIP() invoked!!
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : /api/auth/checkIP ===> Message : IPs match: 103.255.182.117
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : /api/auth/checkIP ===> Message : checkIPResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : /api/auth/checkIP ===> Message : checkIPResponse() completed
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-27 22:35:24===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-28 00:15:54===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : /api/auth/checkIP ===> Message : checkIP() invoked!!
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : /api/auth/checkIP ===> Message : IPs match: 103.225.102.194
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : /api/auth/checkIP ===> Message : checkIPResponse() invoked!
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : /api/auth/checkIP ===> Message : checkIPResponse() completed
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-28 02:32:32===> API : /api/auth/login ===> Message : loginUserResponse() completed
+info: ===> TimeStamp : 2025-11-28 03:22:18===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-28 03:22:18===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-28 03:22:18===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-28 03:22:18===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-28 03:22:18===> API : /api/auth/logout ===> Message : logoutUser() invoked!!
+info: ===> TimeStamp : 2025-11-28 03:22:18===> API : /api/auth/logout ===> Message : logoutUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-28 03:22:18===> API : /api/auth/logout ===> Message : logoutUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-28 03:22:18===> API : /api/auth/logout ===> Message : logoutUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-28 03:22:18===> API : /api/auth/logout ===> Message : logoutUserResponse() completed
+info: ===> TimeStamp : 2025-11-28 03:22:54===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-28 03:22:54===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-28 03:22:54===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-28 03:22:54===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-28 03:22:54===> API : /api/auth/validateuser ===> Message : validateUser() invoked!!
+info: ===> TimeStamp : 2025-11-28 03:22:54===> API : /api/auth/validateuser ===> Message : validateUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-28 03:22:54===> API : /api/auth/validateuser ===> Message : validateUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : /api/auth/validateuser ===> Message : validateUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : /api/auth/validateuser ===> Message : validateUserResponse() completed
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : /api/auth/checkIP ===> Message : checkIP() invoked!!
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : /api/auth/checkIP ===> Message : IPs match: 103.255.182.117
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : /api/auth/checkIP ===> Message : checkIPResponse() invoked!
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : /api/auth/checkIP ===> Message : checkIPResponse() completed
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : null ===> Message : validateRequest() invoked
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : null ===> Message : fetchDBSettings()
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : null ===> Message : validateRequest() Invoked!
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : null ===> Message : validRequest() :: Api validated Successfully
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : /api/auth/login ===> Message : loginUser() invoked!!
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : /api/auth/login ===> Message : loginUser() :: Request Object :: [object Object]
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : /api/auth/login ===> Message : loginUserDB() Invoked !
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : /api/auth/login ===> Message : loginUserResponse() invoked!
+info: ===> TimeStamp : 2025-11-28 03:22:55===> API : /api/auth/login ===> Message : loginUserResponse() completed

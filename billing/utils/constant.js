@@ -1,0 +1,31 @@
+module.exports.errorCode = {
+    applicationError: 500,
+    dbError: 10005,
+    invalidRequest: 10006,
+    noUser : 10007,
+    noUserType : 10008,
+    noBooking:10009,
+    noBill:10010,
+    noBillForDate:10011,
+    noBookingForShift:10012,
+    noBookingForUser:10013,
+    noBillForUser:10014,
+    noPayment:10015,
+    noBillForDateRange:10016,
+  };
+  
+  module.exports.errorMessage = {
+    applicationError: "An Application Error Has Occured",
+    dbError: "Database function error",
+    invalidRequest: "Invalid Request",
+    noUser :"User does not exist",
+    noUserType :"UserType does not exist",
+    noBooking :"This Booking does not exist",
+    noBill :"This Bill does not exist",
+    noBillForDate :"Bill for this date does not exist",
+    noBookingForShift :"There is no booking for the given shift and date",
+    noBookingForUser :"There is no booking for this User",
+    noBillForUser :"There is no bill for this User",
+    noPayment :"This Payment Id Does not exist",
+    noBillForDateRange :"Bill for the specified date range does not exist",
+  };
