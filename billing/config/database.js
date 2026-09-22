@@ -14,6 +14,11 @@ dbConnection = {
 const dbConfig = {
   client: "mysql2",
   connection: dbConnection,
+  pool: {
+    afterCreate: function (conn, done) {
+      conn.query("SET SESSION sql_mode='REAL_AS_FLOAT,PIPES_AS_CONCAT,ANSI_QUOTES,IGNORE_SPACE,ONLY_FULL_GROUP_BY,ANSI,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'", function (err) { done(err, conn); });
+    },
+  },
 };
 
 const knex = require("knex")(dbConfig);

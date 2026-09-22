@@ -136,6 +136,31 @@ const agentSettlementController = {
       response(functionContext, responseObj, null);
     }
   },
+  getAgentSettlementTransactions: async (req, res) => {
+    let logger = new applib.Logger(req.originalUrl);
+    logger.logInfo(`getAgentSettlementTransactions() invoked!!`);
+    let functionContext = {
+      error: null, res, logger,
+      currentTs: momentTimezone.utc(new Date(), "YYYY-MM-DD HH:mm:ss").tz("Asia/Kolkata").format("YYYY-MM-DD HH:mm:ss "),
+    };
+    const responseObj = { name: "getAgentSettlementTransactions", model: new responseModel.getAgentSettlementTransactions() };
+    let request = new requestModel.getAgentSettlementTransactions(req);
+    let validateRequest = validate.getAgentSettlementTransactions(request);
+    if (validateRequest.error) {
+      functionContext.error = new ErrorModel(validateRequest.error.details[0]["message"], errorCode.invalidRequest);
+      response(functionContext, responseObj, null);
+      return;
+    }
+    try {
+      let result = await agentSettlementService.getAgentSettlementTransactions(functionContext, request);
+      response(functionContext, responseObj, result);
+    } catch (err) {
+      if (!err.ErrorMessage && !err.ErrorCode) {
+        functionContext.error = new ErrorModel(errorMessage.applicationError, errorCode.applicationError);
+      }
+      response(functionContext, responseObj, null);
+    }
+  },
   getAgentSettlements: async (req, res) => {
     let logger = new applib.Logger(req.originalUrl);
     var authorization = req.headers.authtoken,

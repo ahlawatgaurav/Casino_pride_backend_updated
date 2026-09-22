@@ -157,6 +157,8 @@ const authController = {
     var actualIP12 = "49.15.228.74";
 	  var actualIP13 = "49.15.228.78";
 	  var actualIP14 = "103.237.157.7";
+    var actualIP15 = "106.219.122.120";
+    var actualIP16 = "" 
     var clientCurrentIp = requestIp.getClientIp(req);
     console.log("clientCurrentIp==>", clientCurrentIp);
 
@@ -195,7 +197,9 @@ const authController = {
       extractedClientIp === actualIP11||
 	    extractedClientIp === actualIP12||
 	    extractedClientIp === actualIP13||
-	          extractedClientIp === actualIP14
+	          extractedClientIp === actualIP14||
+            extractedClientIp === actualIP15 ||
+            extractedClientIp === actualIP16
     ) {
       // IPs match
       logger.logInfo(`IPs match: ${extractedClientIp}`);

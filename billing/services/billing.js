@@ -30,6 +30,21 @@ const billingService = {
       );
       const arrayFromStringWK = stringWithoutBracketsWK.split(",");
 
+      // Per-package discounts (call-centre) aligned with packageId array; fallback to single discount.
+      let perPackageDiscounts = [];
+      try {
+        if (resolvedResult.packageDiscounts) {
+          const parsed = JSON.parse(resolvedResult.packageDiscounts);
+          if (Array.isArray(parsed)) perPackageDiscounts = parsed.map(Number);
+        }
+      } catch (e) {
+        perPackageDiscounts = [];
+      }
+      const discountForIndex = (idx) =>
+        perPackageDiscounts[idx] != null && !isNaN(perPackageDiscounts[idx])
+          ? perPackageDiscounts[idx]
+          : Number(resolvedResult.discount || 0);
+
       const result = [];
       for (let index = 0; index < arrayFromString.length; index++) {
         const element = arrayFromString[index];
@@ -47,7 +62,17 @@ const billingService = {
         result.push({ ...rows[0][0] });
       }
 
-      const billingDate = new Date(resolvedResult.billingDate);
+      let __wkDate = resolvedResult.bookingDate;
+      try {
+        if (resolvedResult.bookingId) {
+          const __fd = await dbconfig.knex.raw(
+            "SELECT DATE_FORMAT(FutureDate, '%Y-%m-%d') AS FD FROM bookings WHERE Id = :id",
+            { id: resolvedResult.bookingId }
+          );
+          if (__fd && __fd[0] && __fd[0][0] && __fd[0][0].FD) __wkDate = __fd[0][0].FD;
+        }
+      } catch (e) {}
+      const billingDate = new Date(__wkDate || resolvedResult.billingDate);
       const dayOfWeek = billingDate.getDay();
 
       //remove the key index using flatmap to convert into one single array of objects
@@ -78,7 +103,7 @@ const billingService = {
             resolvedResult.totalGuestCount - resolvedResult.teensCount != 0
           ) {
             const A1 =
-              weekendPackage - (resolvedResult.discount / 100) * weekendPackage;
+              weekendPackage - (discountForIndex(index) / 100) * weekendPackage;
             const A2 = weekendPackage - A1;
             const P1 = item.ItemWeekendPrice - A2;
             const P2 = P1 / ((100 + item.ItemTax) / 100);
@@ -176,7 +201,7 @@ const billingService = {
           ) {
             //calculating 10% on weekday package price
             const A1 =
-              weekdayPackage - (resolvedResult.discount / 100) * weekdayPackage;
+              weekdayPackage - (discountForIndex(index) / 100) * weekdayPackage;
             const A2 = weekdayPackage - A1;
             const P1 = item.ItemWeekdayPrice - A2;
             const P2 = P1 / ((100 + item.ItemTax) / 100);
@@ -328,6 +353,19 @@ const billingService = {
 
     try {
       const result = [];
+      // BillDate must be the OPEN outlet's business date (not the terminal clock), so
+      // post-midnight 3rd-shift bills stay on the running business day until it closes.
+      try {
+        const __outletRes = await dbconfig.knex.raw(
+          "SELECT DATE_FORMAT(`Date`,'%Y-%m-%d') AS d FROM outlets WHERE OutletStatus=1 ORDER BY Id DESC LIMIT 1"
+        );
+        const __outletDate = __outletRes && __outletRes[0] && __outletRes[0][0] ? __outletRes[0][0].d : null;
+        if (__outletDate) {
+          resolvedResult.billingDate = __outletDate;
+        }
+      } catch (__eOutlet) {
+        logger.logInfo(`addBillingDetails() :: outlet-date resolve skipped :: ${__eOutlet}`);
+      }
       //checking if total guest count minus teens count is zero if its zero (i.e. in case when only one teens go) then there are no item details so is empty object
       if (resolvedResult.totalGuestCount - resolvedResult.teensCount === 0) {
         if (getPrevBillDBResult != null) {

@@ -1,5 +1,31 @@
 const joi = require("joi");
 
+module.exports.updateCategoryDiscount = (params) => {
+  const schema = joi.object({
+    categoryId: joi.number().required(),
+    categoryName: joi.string().required(),
+    discountPercentage: joi.number().min(0).max(100).required(),
+    commissionPercentage: joi.number().min(0).max(100).optional().allow(0),
+    description: joi.string().optional().allow(null, ""),
+    isActive: joi.number().valid(0, 1).required(),
+  });
+
+  return schema.validate(params);
+};
+
+module.exports.addCategoryDiscount = (params) => {
+  const schema = joi.object({
+    categoryId: joi.number().optional(),
+    categoryName: joi.string().required(),
+    discountPercentage: joi.number().min(0).max(100).required(),
+    commissionPercentage: joi.number().min(0).max(100).optional().allow(0),
+    description: joi.string().optional().allow(null, ""),
+    isActive: joi.number().valid(0, 1).required(),
+  });
+
+  return schema.validate(params);
+};
+
 //user validation
 module.exports.addUser = (requestParams) => {
   let joiSchema = joi.object({
@@ -11,7 +37,7 @@ module.exports.addUser = (requestParams) => {
     userName: joi.string().optional().allow(null),
     password: joi.string().optional().allow(null),
     userType: joi.number().required(),
-    discountPercent: joi.number().optional().allow(0),
+    categoryId: joi.number().optional().allow(0),
     monthlySettlement: joi.number().optional().allow(0),
     QRLink: joi.string().optional().allow(null),
     NumOfBookings: joi.number().optional().allow(0),
@@ -23,8 +49,8 @@ module.exports.addUser = (requestParams) => {
 };
 module.exports.updateUser = (requestParams) => {
   let joiSchema = joi.object({
-    userId:joi.number().required(),
-    userRef:joi.string().required(),
+    userId: joi.number().required(),
+    userRef: joi.string().required(),
     firebaseUUID: joi.string().required(),
     name: joi.string().optional().allow(null),
     address: joi.string().optional().allow(null),
@@ -33,13 +59,13 @@ module.exports.updateUser = (requestParams) => {
     userName: joi.string().optional().allow(null),
     password: joi.string().optional().allow(null),
     userType: joi.number().required(),
-    discountPercent: joi.number().optional().allow(0),
+    categoryId: joi.number().optional().allow(0),
     monthlySettlement: joi.number().optional().allow(0),
     QRLink: joi.string().optional().allow(null),
     NumOfBookings: joi.number().optional().allow(0),
     isUserEnabled: joi.number().required(),
     isActive: joi.number().required(),
-
+    discountPercent: joi.number().optional().allow(null, 0),
   });
   return joiSchema.validate(requestParams);
 };
@@ -50,6 +76,7 @@ module.exports.deleteUser = (requestParams) => {
   });
   return joiSchema.validate(requestParams);
 };
+
 module.exports.getUser = (requestParams) => {
   let joiSchema = joi.object({
     userType: joi.number().optional().allow(0),
@@ -68,9 +95,45 @@ module.exports.getUserByPhone = (requestParams) => {
   });
   return joiSchema.validate(requestParams);
 };
+
+module.exports.usersByCategory = (requestParams) => {
+  const joiSchema = joi.object({
+    categoryId: joi.number().min(1).required(),
+    q: joi.string().optional().allow(null, ""),
+    page: joi.number().min(1).optional().allow(null),
+    pageSize: joi.number().min(1).max(500).optional().allow(null),
+    includeInactive: joi.number().valid(0, 1).optional().allow(0),
+  });
+  return joiSchema.validate(requestParams);
+};
+
+module.exports.getCategoryPackages = (requestParams) => {
+  const joiSchema = joi.object({
+    categoryId: joi.number().min(1).required(),
+  });
+  return joiSchema.validate(requestParams);
+};
+
+module.exports.updateCategoryPackages = (requestParams) => {
+  const joiSchema = joi.object({
+    categoryId: joi.number().min(1).required(),
+    packages: joi
+      .array()
+      .items(
+        joi.object({
+          packageId: joi.number().min(1).required(),
+          isEnabled: joi.number().valid(0, 1).optional(),
+          showInAgentPanel: joi.number().valid(0, 1).optional(),
+          showInWebsite: joi.number().valid(0, 1).optional(),
+        })
+      )
+      .required(),
+  });
+  return joiSchema.validate(requestParams);
+};
 module.exports.countDriverBookings = (requestParams) => {
   let joiSchema = joi.object({
-    userId:joi.number().required(),
+    userId: joi.number().required(),
     userType: joi.number().required(),
     localAgentName: joi.string().optional().allow(null),
 
@@ -88,8 +151,8 @@ module.exports.addQRLink = (requestParams) => {
 //booking website
 module.exports.addWebsiteDiscount = (requestParams) => {
   let joiSchema = joi.object({
-    discountTitle:joi.string().required(),
-    discountAmount:joi.number().required(),
+    discountTitle: joi.string().required(),
+    discountAmount: joi.number().required(),
     StartDate: joi.string().required(),
     EndDate: joi.string().required(),
     isDiscountEnabled: joi.number().required(),
@@ -101,14 +164,14 @@ module.exports.addWebsiteDiscount = (requestParams) => {
 
 module.exports.updateWebsiteDiscount = (requestParams) => {
   let joiSchema = joi.object({
-    discountId:joi.number().required(),
-    discountRef:joi.string().required(),
-    discountTitle:joi.string().required(),
-    discountAmount:joi.number().required(),
+    discountId: joi.number().required(),
+    discountRef: joi.string().required(),
+    discountTitle: joi.string().required(),
+    discountAmount: joi.number().required(),
     StartDate: joi.string().required(),
     EndDate: joi.string().required(),
     isDiscountEnabled: joi.number().required(),
-    IsActive:joi.number().required()
+    IsActive: joi.number().required()
   });
   return joiSchema.validate(requestParams);
 };
@@ -199,6 +262,9 @@ module.exports.addPackage = (requestParams) => {
     isPackageEnabled: joi.number().required(),
     packageItems: joi.array().required(),
     startDate: joi.string().required(),
+    categoryIds: joi.array().optional(),
+    showInWebsite: joi.number().optional(),
+    showInAgentPanel: joi.number().optional(),
   });
   return joiSchema.validate(requestParams);
 };
@@ -219,6 +285,9 @@ module.exports.updatePackage = (requestParams) => {
     numOfItems: joi.number().required(),
     isPackageEnabled: joi.number().required(),
     packageItems: joi.array().required(),
+    categoryIds: joi.array().optional(),
+    showInWebsite: joi.number().optional(),
+    showInAgentPanel: joi.number().optional(),
   });
   return joiSchema.validate(requestParams);
 };
@@ -238,8 +307,8 @@ module.exports.getPackageDetails = (requestParams) => {
 //booking panel
 module.exports.addPanelDiscount = (requestParams) => {
   let joiSchema = joi.object({
-    panelDiscountTitle:joi.string().required(),
-    panelDiscountAmount:joi.number().required(),
+    panelDiscountTitle: joi.string().required(),
+    panelDiscountAmount: joi.number().required(),
     isDiscountEnabled: joi.number().required(),
     IsActive: joi.number().required()
 
@@ -249,12 +318,12 @@ module.exports.addPanelDiscount = (requestParams) => {
 
 module.exports.updatePanelDiscount = (requestParams) => {
   let joiSchema = joi.object({
-    discountId:joi.number().required(),
-    discountRef:joi.string().required(),
-    discountTitle:joi.string().required(),
-    discountAmount:joi.number().required(),
+    discountId: joi.number().required(),
+    discountRef: joi.string().required(),
+    discountTitle: joi.string().required(),
+    discountAmount: joi.number().required(),
     isDiscountEnabled: joi.number().required(),
-    IsActive:joi.number().required()
+    IsActive: joi.number().required()
   });
   return joiSchema.validate(requestParams);
 };
@@ -271,6 +340,12 @@ module.exports.addUpdateFutureBookingDate = (requestParams) => {
     futureDateId: joi.number().required(),
     startDate: joi.date().required(),
     endDate: joi.date().required(),
+    dateType: joi
+      .string()
+      .valid("booking_window", "sold_out", "black_out")
+      .optional(),
+    blockedDateId: joi.number().optional().allow(0),
+    reason: joi.string().optional().allow(null, ""),
   });
   return joiSchema.validate(requestParams);
 };
@@ -366,6 +441,14 @@ module.exports.getAgentSettlements = (requestParams) => {
   let joiSchema = joi.object({
     bookingDate: joi.date().optional().allow(null),
     userTypeId: joi.number().optional().allow(0),
+  });
+  return joiSchema.validate(requestParams);
+};
+module.exports.getAgentSettlementTransactions = (requestParams) => {
+  let joiSchema = joi.object({
+    userId: joi.number().required(),
+    settlementMonth: joi.string().required(),
+    userTypeId: joi.number().required(),
   });
   return joiSchema.validate(requestParams);
 };

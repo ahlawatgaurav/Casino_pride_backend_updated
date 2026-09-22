@@ -1,4 +1,16 @@
-require("dotenv").config({ path: __dirname + "/.env" });
+// require("dotenv").config({ path: __dirname + "/.env" });
+const path = require("path");
+const dotenv = require("dotenv");
+
+const envFile =
+  process.env.NODE_ENV === "production"
+    ? ".env.production"
+    : ".env.local";
+
+dotenv.config({
+  path: path.join(__dirname, envFile),
+});
+
 
 const express = require("express");
 const app = express();

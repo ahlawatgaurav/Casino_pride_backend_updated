@@ -10,7 +10,18 @@ const validate = require("../utils/validation");
 const AWS = require("aws-sdk");
 const FileUploadFunction = require("../utils/fileUpload").FileUploadFunction;
 const fs = require("fs")
-require("dotenv").config({ path: __dirname + "/.env" });
+// require("dotenv").config({ path: __dirname + "/.env" });
+const path = require("path");
+const dotenv = require("dotenv");
+
+const envFile =
+  process.env.NODE_ENV === "production"
+    ? ".env.production"
+    : ".env.local";
+
+dotenv.config({
+  path: path.join(__dirname, envFile),
+});
 
 const userController = {
   addUser: async (req, res) => {
@@ -36,6 +47,9 @@ const userController = {
     let addUserRequest = new requestModel.addUser(req);
 
     logger.logInfo(`addUser() :: Request Object :: ${addUserRequest}`);
+logger.logInfo(
+  "🧪 FINAL REQUEST OBJECT :: " + JSON.stringify(addUserRequest)
+);
 
     let validateRequest = validate.addUser(addUserRequest);
 
@@ -322,6 +336,88 @@ const userController = {
         );
       }
       logger.logInfo(`getUserDBResult :: Error :: ${JSON.stringify(err)}`);
+      response(functionContext, responseObj, null);
+    }
+  },
+  getUserTypes: async (req, res) => {
+    let logger = new applib.Logger(req.originalUrl);
+    let functionContext = { error: null, res: res, logger: logger };
+    const responseObj = { name: "getUserTypes", model: { Error: null, Details: null } };
+    try {
+      const rows = await dbconfig.knex.raw(`CALL usp_get_user_types()`);
+      response(functionContext, responseObj, rows[0][0]);
+    } catch (err) {
+      functionContext.error = new ErrorModel(errorMessage.applicationError, errorCode.applicationError);
+      response(functionContext, responseObj, null);
+    }
+  },
+  getAgentByUUID: async (req, res) => {
+    let logger = new applib.Logger(req.originalUrl);
+    const uuid = req.query.uuid;
+    let functionContext = { error: null, res: res, logger: logger };
+    const responseObj = { name: "getAgentByUUID", model: { Error: null, Details: null } };
+    if (!uuid) {
+      functionContext.error = new ErrorModel("UUID is required", errorCode.invalidRequest);
+      response(functionContext, responseObj, null);
+      return;
+    }
+    try {
+      const agent = await userService.getAgentByUUID(functionContext, uuid);
+      response(functionContext, responseObj, agent);
+    } catch (err) {
+      if (!err.ErrorMessage && !err.ErrorCode) {
+        functionContext.error = new ErrorModel(errorMessage.applicationError, errorCode.applicationError);
+      }
+      response(functionContext, responseObj, null);
+    }
+  },
+  usersByCategory: async (req, res) => {
+    let logger = new applib.Logger(req.originalUrl);
+    logger.logInfo(`usersByCategory() invoked!!`);
+
+    let functionContext = {
+      error: null,
+      res: res,
+      logger: logger,
+      currentTs: momentTimezone
+        .utc(new Date(), "YYYY-MM-DD HH:mm:ss")
+        .tz("Asia/Kolkata")
+        .format("YYYY-MM-DD HH:mm:ss "),
+    };
+
+    const responseObj = {
+      name: "usersByCategory",
+      model: new responseModel.usersByCategory(),
+    };
+
+    const reqModel = new requestModel.usersByCategory(req);
+    const validateRequest = validate.usersByCategory(reqModel);
+    if (validateRequest.error) {
+      functionContext.error = new ErrorModel(
+        validateRequest.error.details[0]["message"],
+        errorCode.invalidRequest
+      );
+      logger.logInfo(
+        `usersByCategory() Error:: Invalid Request :: ${JSON.stringify(
+          validateRequest
+        )}`
+      );
+      response(functionContext, responseObj, null);
+      return;
+    }
+
+    try {
+      const result = await userService.usersByCategory(functionContext, reqModel);
+      response(functionContext, responseObj, result);
+    } catch (err) {
+      if (!err.ErrorMessage && !err.ErrorCode) {
+        logger.logInfo(`usersByCategory :: Error :: ${err}`);
+        functionContext.error = new ErrorModel(
+          errorMessage.applicationError,
+          errorCode.applicationError
+        );
+      }
+      logger.logInfo(`usersByCategory :: Error :: ${JSON.stringify(err)}`);
       response(functionContext, responseObj, null);
     }
   },

@@ -107,6 +107,17 @@ const packageController = {
         addPackageRequest,
         addPackageDBResult
       );
+      await packageService.setPackageChannels(
+        functionContext,
+        addPackageDBResult.Id,
+        addPackageRequest.showInWebsite,
+        addPackageRequest.showInAgentPanel
+      );
+      await packageService.setPackageCategories(
+        functionContext,
+        addPackageDBResult.Id,
+        addPackageRequest.categoryIds
+      );
       let getPackageByIdDBResult = await packageService.getPackageById(
         functionContext,
         addPackageRequest,
@@ -183,6 +194,17 @@ const packageController = {
         functionContext,
         updatePackageRequest,
         updatePackageDBResult
+      );
+      await packageService.setPackageChannels(
+        functionContext,
+        updatePackageDBResult.Id,
+        updatePackageRequest.showInWebsite,
+        updatePackageRequest.showInAgentPanel
+      );
+      await packageService.setPackageCategories(
+        functionContext,
+        updatePackageDBResult.Id,
+        updatePackageRequest.categoryIds
       );
       let getPackageByIdDBResult = await packageService.getPackageById(
         functionContext,

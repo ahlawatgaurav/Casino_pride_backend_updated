@@ -1,119 +1,171 @@
-//site requests
+class updateCategoryDiscount {
+  constructor(req) {
+    this.categoryId = req.body.categoryId ? Number(req.body.categoryId) : null;
+    this.categoryName = req.body.categoryName ? req.body.categoryName : null;
+    this.discountPercentage = req.body.discountPercentage ? Number(req.body.discountPercentage) : 0;
+    this.commissionPercentage = 0; // Defaulting to 0 as requested to remove from FE
+    this.description = req.body.description ? req.body.description : null;
+    this.isActive = req.body.isActive === undefined ? 1 : (req.body.isActive ? 1 : 0);
+  }
+}
+
+
+module.exports.updateCategoryDiscount = updateCategoryDiscount;
+class addCategoryDiscount {
+  constructor(req) {
+    this.categoryId = req.body.categoryId ? Number(req.body.categoryId) : undefined;
+    this.categoryName = req.body.categoryName ? req.body.categoryName : null;
+    this.discountPercentage = req.body.discountPercentage ? Number(req.body.discountPercentage) : 0;
+    this.commissionPercentage = 0; // Defaulting to 0 as requested to remove from FE
+    this.description = req.body.description ? req.body.description : null;
+    this.isActive = req.body.isActive === undefined ? 1 : (req.body.isActive ? 1 : 0);
+  }
+}
+
+module.exports.addCategoryDiscount = addCategoryDiscount;
+
 class getSites {
-    constructor(req) {
-      this.companyId = req.query.companyId ? req.query.companyId : 0;
-      this.siteId = req.query.siteId ? req.query.siteId : 0;
-    }
+  constructor(req) {
+    this.companyId = req.query.companyId ? req.query.companyId : 0;
+    this.siteId = req.query.siteId ? req.query.siteId : 0;
   }
-  
-  class addUser {
-    constructor(req) {
-      this.firebaseUUID = req.body.firebaseUUID ? req.body.firebaseUUID : null;
-      this.name = req.body.name ? req.body.name : null;
-      this.address = req.body.address ? req.body.address : null;
-      this.email = req.body.email ? req.body.email : null;
-      this.phone = req.body.phone ? req.body.phone : null;
-      this.userName = req.body.userName ? req.body.userName : null;
-      this.password = req.body.password ? req.body.password : null;
-      this.userType = req.body.userType ? req.body.userType : 0;
-      this.discountPercent = req.body.discountPercent ? req.body.discountPercent : 0;
-      this.monthlySettlement = req.body.monthlySettlement ? req.body.monthlySettlement : 0;
-      this.QRLink = req.body.QRLink ? req.body.QRLink : null;
-      this.NumOfBookings = req.body.NumOfBookings ? req.body.NumOfBookings : 0;
-      this.isUserEnabled = req.body.isUserEnabled ? req.body.isUserEnabled : 0;
-      this.isUserEnabled = req.body.isUserEnabled ? req.body.isUserEnabled : 0;
-      this.isActive = req.body.isActive ? req.body.isActive : 0;
-    }
-  }
-  class updateUser {
-    constructor(req) {
-      this.userId = req.body.userId ? req.body.userId : 0;
-      this.userRef = req.body.userRef ? req.body.userRef : null;
-      this.firebaseUUID = req.body.firebaseUUID ? req.body.firebaseUUID : null;
-      this.name = req.body.name ? req.body.name : null;
-      this.address = req.body.address ? req.body.address : null;
-      this.email = req.body.email ? req.body.email : null;
-      this.phone = req.body.phone ? req.body.phone : null;
-      this.userName = req.body.userName ? req.body.userName : null;
-      this.password = req.body.password ? req.body.password : null;
-      this.userType = req.body.userType ? req.body.userType : 0;
-      this.discountPercent = req.body.discountPercent ? req.body.discountPercent : 0;
-      this.monthlySettlement = req.body.monthlySettlement ? req.body.monthlySettlement : 0;
-      this.QRLink = req.body.QRLink ? req.body.QRLink : null;
-      this.NumOfBookings = req.body.NumOfBookings ? req.body.NumOfBookings : 0;
-      this.isUserEnabled = req.body.isUserEnabled ? req.body.isUserEnabled : 0;
-      this.isActive = req.body.isActive ? req.body.isActive : 0;
-    }
-  }
+}
 
-  class deleteUser {
-    constructor(req) {
-      this.userId = req.query.userId ? req.query.userId : 0;
-    }
+class addUser {
+  constructor(req) {
+    this.firebaseUUID = req.body.firebaseUUID ? req.body.firebaseUUID : null;
+    this.name = req.body.name ? req.body.name : null;
+    this.address = req.body.address ? req.body.address : null;
+    this.email = req.body.email ? req.body.email : null;
+    this.phone = req.body.phone ? req.body.phone : null;
+    this.userName = req.body.userName ? req.body.userName : null;
+    this.password = req.body.password ? req.body.password : null;
+    this.userType = req.body.userType ? req.body.userType : 0;
+    this.categoryId = req.body.categoryId ? Number(req.body.categoryId) : 0;
+    this.monthlySettlement = req.body.monthlySettlement ? req.body.monthlySettlement : 0;
+    this.QRLink = req.body.QRLink ? req.body.QRLink : null;
+    this.NumOfBookings = req.body.NumOfBookings ? req.body.NumOfBookings : 0;
+    this.isUserEnabled = req.body.isUserEnabled ? req.body.isUserEnabled : 0;
+    this.isUserEnabled = req.body.isUserEnabled ? req.body.isUserEnabled : 0;
+    this.isActive = req.body.isActive ? req.body.isActive : 0;
   }
+}
+class updateUser {
+  constructor(req) {
+    this.userId = req.body.userId ? req.body.userId : 0;
+    this.userRef = req.body.userRef ? req.body.userRef : null;
+    this.firebaseUUID = req.body.firebaseUUID ? req.body.firebaseUUID : null;
+    this.name = req.body.name ? req.body.name : null;
+    this.address = req.body.address ? req.body.address : null;
+    this.email = req.body.email ? req.body.email : null;
+    this.phone = req.body.phone ? req.body.phone : null;
+    this.userName = req.body.userName ? req.body.userName : null;
+    this.password = req.body.password ? req.body.password : null;
+    this.userType = req.body.userType ? req.body.userType : 0;
+    this.categoryId = req.body.categoryId ? Number(req.body.categoryId) : 0;
+    this.monthlySettlement = req.body.monthlySettlement ? req.body.monthlySettlement : 0;
+    this.QRLink = req.body.QRLink ? req.body.QRLink : null;
+    this.NumOfBookings = req.body.NumOfBookings ? req.body.NumOfBookings : 0;
+    this.isUserEnabled = req.body.isUserEnabled ? req.body.isUserEnabled : 0;
+    this.isActive = req.body.isActive ? req.body.isActive : 0;
+    this.discountPercent = req.body.discountPercent !== undefined ? Number(req.body.discountPercent) : null;
+  }
+}
 
-  class getUser {
-    constructor(req) {
-      this.userType = req.query.userType ? req.query.userType : 0;
-    }
+class deleteUser {
+  constructor(req) {
+    this.userId = req.query.userId ? req.query.userId : 0;
   }
-  class getUserById {
-    constructor(req) {
-      this.userId = req.query.userId ? req.query.userId : 0;
-    }
-  }
-  class getUserByPhone {
-    constructor(req) {
-      this.phone = req.query.phone ? req.query.phone : 0;
-    }
-  }
-  class addQRLink {
-    constructor(req) {
-      this.userId = req.query.userId ? req.query.userId : 0;
-      this.userType = req.query.userType ? req.query.userType : 0;
-    }
-  }
-  class countDriverBookings {
-    constructor(req) {
-      this.userId = req.body.userId ? req.body.userId : 0;
-      this.userType = req.body.userType ? req.body.userType : 0;
-      this.localAgentName = req.body.localAgentName ? req.body.localAgentName : null;
-    }
-  }
+}
 
-  //discounts for booking website
-  class addWebsiteDiscount {
-    constructor(req) {
-      this.discountTitle = req.body.discountTitle ? req.body.discountTitle : null;
-      this.discountAmount = req.body.discountAmount ? req.body.discountAmount : 0;
-      this.StartDate = req.body.StartDate ? req.body.StartDate : null;
-      this.EndDate = req.body.EndDate ? req.body.EndDate : null;
-      this.isDiscountEnabled = req.body.isDiscountEnabled ? req.body.isDiscountEnabled : 0;
-      this.IsActive = req.body.IsActive ? req.body.IsActive : 0;
-    }
+class getUser {
+  constructor(req) {
+    this.userType = req.query.userType ? req.query.userType : 0;
   }
-  class updateWebsiteDiscount {
-    constructor(req) {
-      this.discountId=req.body.discountId ? req.body.discountId :0;
-      this.discountRef=req.body.discountRef ? req.body.discountRef :null;
-      this.discountTitle = req.body.discountTitle ? req.body.discountTitle : null;
-      this.discountAmount = req.body.discountAmount ? req.body.discountAmount : 0;
-      this.StartDate = req.body.StartDate ? req.body.StartDate : null;
-      this.EndDate = req.body.EndDate ? req.body.EndDate : null;
-      this.isDiscountEnabled = req.body.isDiscountEnabled ? req.body.isDiscountEnabled : 0;
-      this.IsActive = req.body.IsActive ? req.body.IsActive :0;
-    }
+}
+class getUserById {
+  constructor(req) {
+    this.userId = req.query.userId ? req.query.userId : 0;
   }
-  class deleteWebsiteDiscount {
-    constructor(req) {
-      this.discountId = req.query.discountId ? req.query.discountId : 0;
-    }
+}
+class getUserByPhone {
+  constructor(req) {
+    this.phone = req.query.phone ? req.query.phone : 0;
   }
-  class uploadQRFile {
-    constructor(req) {
-      this.userId = req.body.userId ? req.body.userId : 0;
-    }
+}
+
+class usersByCategory {
+  constructor(req) {
+    this.categoryId = req.query.categoryId ? Number(req.query.categoryId) : 0;
+    this.q = req.query.q ? String(req.query.q) : null;
+    this.page = req.query.page ? Number(req.query.page) : 1;
+    this.pageSize = req.query.pageSize ? Number(req.query.pageSize) : 50;
+    this.includeInactive =
+      req.query.includeInactive !== undefined && req.query.includeInactive !== null
+        ? Number(req.query.includeInactive)
+        : 0;
   }
+}
+
+class getCategoryPackages {
+  constructor(req) {
+    this.categoryId = req.query.categoryId ? Number(req.query.categoryId) : 0;
+  }
+}
+
+class updateCategoryPackages {
+  constructor(req) {
+    this.categoryId = req.body.categoryId ? Number(req.body.categoryId) : 0;
+    this.packages = Array.isArray(req.body.packages) ? req.body.packages : [];
+  }
+}
+class addQRLink {
+  constructor(req) {
+    this.userId = req.query.userId ? req.query.userId : 0;
+    this.userType = req.query.userType ? req.query.userType : 0;
+  }
+}
+class countDriverBookings {
+  constructor(req) {
+    this.userId = req.body.userId ? req.body.userId : 0;
+    this.userType = req.body.userType ? req.body.userType : 0;
+    this.localAgentName = req.body.localAgentName ? req.body.localAgentName : null;
+  }
+}
+
+//discounts for booking website
+class addWebsiteDiscount {
+  constructor(req) {
+    this.discountTitle = req.body.discountTitle ? req.body.discountTitle : null;
+    this.discountAmount = req.body.discountAmount ? req.body.discountAmount : 0;
+    this.StartDate = req.body.StartDate ? req.body.StartDate : null;
+    this.EndDate = req.body.EndDate ? req.body.EndDate : null;
+    this.isDiscountEnabled = req.body.isDiscountEnabled ? req.body.isDiscountEnabled : 0;
+    this.IsActive = req.body.IsActive ? req.body.IsActive : 0;
+  }
+}
+class updateWebsiteDiscount {
+  constructor(req) {
+    this.discountId = req.body.discountId ? req.body.discountId : 0;
+    this.discountRef = req.body.discountRef ? req.body.discountRef : null;
+    this.discountTitle = req.body.discountTitle ? req.body.discountTitle : null;
+    this.discountAmount = req.body.discountAmount ? req.body.discountAmount : 0;
+    this.StartDate = req.body.StartDate ? req.body.StartDate : null;
+    this.EndDate = req.body.EndDate ? req.body.EndDate : null;
+    this.isDiscountEnabled = req.body.isDiscountEnabled ? req.body.isDiscountEnabled : 0;
+    this.IsActive = req.body.IsActive ? req.body.IsActive : 0;
+  }
+}
+class deleteWebsiteDiscount {
+  constructor(req) {
+    this.discountId = req.query.discountId ? req.query.discountId : 0;
+  }
+}
+class uploadQRFile {
+  constructor(req) {
+    this.userId = req.body.userId ? req.body.userId : 0;
+  }
+}
 
 
 //coupons
@@ -186,6 +238,9 @@ class addPackage {
     this.isPackageEnabled = req.body.isPackageEnabled ? req.body.isPackageEnabled : 0;
     this.packageItems = req.body.packageItems ? req.body.packageItems : [];
     this.startDate = req.body.startDate ? req.body.startDate : null;
+    this.categoryIds = Array.isArray(req.body.categoryIds) ? req.body.categoryIds : [];
+    this.showInWebsite = req.body.showInWebsite ? req.body.showInWebsite : 0;
+    this.showInAgentPanel = req.body.showInAgentPanel ? req.body.showInAgentPanel : 0;
   }
 }
 class updatePackage {
@@ -205,6 +260,9 @@ class updatePackage {
     this.numOfItems = req.body.numOfItems ? req.body.numOfItems : 0;
     this.isPackageEnabled = req.body.isPackageEnabled ? req.body.isPackageEnabled : 0;
     this.packageItems = req.body.packageItems ? req.body.packageItems : [];
+    this.categoryIds = Array.isArray(req.body.categoryIds) ? req.body.categoryIds : [];
+    this.showInWebsite = req.body.showInWebsite ? req.body.showInWebsite : 0;
+    this.showInAgentPanel = req.body.showInAgentPanel ? req.body.showInAgentPanel : 0;
   }
 }
 class deletePackage {
@@ -230,12 +288,12 @@ class addPanelDiscount {
 }
 class updatePanelDiscount {
   constructor(req) {
-    this.discountId=req.body.discountId ? req.body.discountId :0;
-    this.discountRef=req.body.discountRef ? req.body.discountRef :null;
+    this.discountId = req.body.discountId ? req.body.discountId : 0;
+    this.discountRef = req.body.discountRef ? req.body.discountRef : null;
     this.discountTitle = req.body.discountTitle ? req.body.discountTitle : null;
     this.discountAmount = req.body.discountAmount ? req.body.discountAmount : 0;
     this.isDiscountEnabled = req.body.isDiscountEnabled ? req.body.isDiscountEnabled : 0;
-    this.IsActive = req.body.IsActive ? req.body.IsActive :0;
+    this.IsActive = req.body.IsActive ? req.body.IsActive : 0;
   }
 }
 class deletePanelDiscount {
@@ -247,93 +305,103 @@ class deletePanelDiscount {
 //Future Booking Date
 class addUpdateFutureBookingDate {
   constructor(req) {
-    this.futureDateId=req.body.futureDateId ? req.body.futureDateId :0;
-    this.startDate=req.body.startDate ? req.body.startDate :null;
+    this.futureDateId = req.body.futureDateId ? req.body.futureDateId : 0;
+    this.startDate = req.body.startDate ? req.body.startDate : null;
     this.endDate = req.body.endDate ? req.body.endDate : null;
+    this.dateType = req.body.dateType ? req.body.dateType : "booking_window";
+    this.blockedDateId = req.body.blockedDateId ? Number(req.body.blockedDateId) : 0;
+    this.reason = req.body.reason ? req.body.reason : null;
   }
 }
 
 //Outlet
 class openOutlet {
   constructor(req) {
-    this.outletDate=req.body.outletDate ? req.body.outletDate :null;
+    this.outletDate = req.body.outletDate ? req.body.outletDate : null;
   }
 }
 class closeOutlet {
   constructor(req) {
-    this.outletId=req.body.outletId ? req.body.outletId :0;
+    this.outletId = req.body.outletId ? req.body.outletId : 0;
   }
 }
 class checkCurrentOutlet {
   constructor(req) {
-    this.outletDate=req.query.outletDate ? req.query.outletDate :null;
+    this.outletDate = req.query.outletDate ? req.query.outletDate : null;
   }
 }
 
 //Shift
 class checkShiftForUser {
   constructor(req) {
-    this.outletDate=req.query.outletDate ? req.query.outletDate :null;
-    this.userId=req.query.userId ? req.query.userId :0;
-    this.userType=req.query.userType ? req.query.userType :0;
+    this.outletDate = req.query.outletDate ? req.query.outletDate : null;
+    this.userId = req.query.userId ? req.query.userId : 0;
+    this.userType = req.query.userType ? req.query.userType : 0;
   }
 }
 class openShift {
   constructor(req) {
-    this.outletDate=req.body.outletDate ? req.body.outletDate :null;
-    this.shiftTypeId=req.body.shiftTypeId ? req.body.shiftTypeId :0;
-    this.userType=req.body.userType ? req.body.userType :0;
-    this.userId=req.body.userId ? req.body.userId :0;
-    this.openTime=req.body.openTime ? req.body.openTime :null;
+    this.outletDate = req.body.outletDate ? req.body.outletDate : null;
+    this.shiftTypeId = req.body.shiftTypeId ? req.body.shiftTypeId : 0;
+    this.userType = req.body.userType ? req.body.userType : 0;
+    this.userId = req.body.userId ? req.body.userId : 0;
+    this.openTime = req.body.openTime ? req.body.openTime : null;
   }
 }
 class closeShift {
   constructor(req) {
-    this.outletId=req.body.outletId ? req.body.outletId :null;
-    this.closeTime=req.body.closeTime ? req.body.closeTime :null;
-    this.shiftId=req.body.shiftId ? req.body.shiftId :0;
-    this.userTypeId=req.body.userTypeId ? req.body.userTypeId :0;
-    this.userId=req.body.userId ? req.body.userId :0;
+    this.outletId = req.body.outletId ? req.body.outletId : null;
+    this.closeTime = req.body.closeTime ? req.body.closeTime : null;
+    this.shiftId = req.body.shiftId ? req.body.shiftId : 0;
+    this.userTypeId = req.body.userTypeId ? req.body.userTypeId : 0;
+    this.userId = req.body.userId ? req.body.userId : 0;
   }
 }
 class reopenShift {
   constructor(req) {
-    this.outletId=req.body.outletId ? req.body.outletId :null;
-    this.reopenTime=req.body.reopenTime ? req.body.reopenTime :null;
-    this.shiftId=req.body.shiftId ? req.body.shiftId :0;
-    this.userTypeId=req.body.userTypeId ? req.body.userTypeId :0;
-    this.userId=req.body.userId ? req.body.userId :0;
+    this.outletId = req.body.outletId ? req.body.outletId : null;
+    this.reopenTime = req.body.reopenTime ? req.body.reopenTime : null;
+    this.shiftId = req.body.shiftId ? req.body.shiftId : 0;
+    this.userTypeId = req.body.userTypeId ? req.body.userTypeId : 0;
+    this.userId = req.body.userId ? req.body.userId : 0;
   }
 }
 class recentShiftForOutlet {
   constructor(req) {
-    this.outletDate=req.query.outletDate ? req.query.outletDate :null;
+    this.outletDate = req.query.outletDate ? req.query.outletDate : null;
   }
 }
 
 //Agent settlement
 class addUpdateAgentSettlement {
   constructor(req) {
-    this.userId=req.body.userId ? req.body.userId :0;
-    this.userTypeId=req.body.userTypeId ? req.body.userTypeId :0;
-    this.agentName=req.body.agentName ? req.body.agentName :null;
-    this.settlementAmount=req.body.settlementAmount ? req.body.settlementAmount :0;
-    this.bookingDate=req.body.bookingDate ? req.body.bookingDate :null;
-    this.bookingId=req.body.bookingId ? req.body.bookingId :null;
+    this.userId = req.body.userId ? req.body.userId : 0;
+    this.userTypeId = req.body.userTypeId ? req.body.userTypeId : 0;
+    this.agentName = req.body.agentName ? req.body.agentName : null;
+    this.settlementAmount = req.body.settlementAmount ? req.body.settlementAmount : 0;
+    this.bookingDate = req.body.bookingDate ? req.body.bookingDate : null;
+    this.bookingId = req.body.bookingId ? req.body.bookingId : null;
   }
 }
 class agentMonthlySettlement {
   constructor(req) {
-    this.id=req.body.id ? req.body.id :0;
-    this.userId=req.body.userId ? req.body.userId :0;
-    this.referenceNum=req.body.referenceNum ? req.body.referenceNum :null;
-    this.isSettled=req.body.isSettled ? req.body.isSettled :0;
+    this.id = req.body.id ? req.body.id : 0;
+    this.userId = req.body.userId ? req.body.userId : 0;
+    this.referenceNum = req.body.referenceNum ? req.body.referenceNum : null;
+    this.isSettled = req.body.isSettled ? req.body.isSettled : 0;
   }
 }
 class getAgentSettlements {
   constructor(req) {
-    this.bookingDate=req.query.bookingDate ? req.query.bookingDate :null;
-    this.userTypeId=req.query.userTypeId ? req.query.userTypeId :0;
+    this.bookingDate = req.query.bookingDate ? req.query.bookingDate : null;
+    this.userTypeId = req.query.userTypeId ? req.query.userTypeId : 0;
+  }
+}
+class getAgentSettlementTransactions {
+  constructor(req) {
+    this.userId = req.query.userId ? parseInt(req.query.userId) : 0;
+    this.settlementMonth = req.query.settlementMonth ? req.query.settlementMonth : null;
+    this.userTypeId = req.query.userTypeId ? parseInt(req.query.userTypeId) : 0;
   }
 }
 
@@ -393,6 +461,9 @@ module.exports.deleteUser = deleteUser;
 module.exports.getUser = getUser;
 module.exports.getUserById = getUserById;
 module.exports.getUserByPhone = getUserByPhone;
+module.exports.usersByCategory = usersByCategory;
+module.exports.getCategoryPackages = getCategoryPackages;
+module.exports.updateCategoryPackages = updateCategoryPackages;
 module.exports.addQRLink = addQRLink;
 module.exports.countDriverBookings = countDriverBookings;
 module.exports.uploadQRFile = uploadQRFile;
@@ -444,6 +515,7 @@ module.exports.recentShiftForOutlet = recentShiftForOutlet;
 module.exports.addUpdateAgentSettlement = addUpdateAgentSettlement;
 module.exports.agentMonthlySettlement = agentMonthlySettlement;
 module.exports.getAgentSettlements = getAgentSettlements;
+module.exports.getAgentSettlementTransactions = getAgentSettlementTransactions;
 
 //URL MApping
 module.exports.shortenURL = shortenURL;

@@ -125,8 +125,9 @@ class generateReports {
     this.isSettlementReport = req.body.isSettlementReport ? req.body.isSettlementReport : 0;
     this.settlementDate = req.body.settlementDate ? req.body.settlementDate : null;
     this.settlementUpdateDate = req.body.settlementUpdateDate ? req.body.settlementUpdateDate : null;
+    this.settlementFromDate = req.body.settlementFromDate ? req.body.settlementFromDate : null;
     this.isAgentPanel = req.body.isAgentPanel ? req.body.isAgentPanel : 0;
-    this.settlementMonth = req.body.settlementMonth ? req.body.settlementMonth : null;// agent settlement new 
+    this.settlementMonth = req.body.settlementMonth ? req.body.settlementMonth : null;// agent settlement new
 	  this.userTypeRole = req.body.userTypeRole ? req.body.userTypeRole : 0;
   }
 }
@@ -147,6 +148,30 @@ class cashierReportShiftWise {
     this.date = req.query.date ? req.query.date : null; 
     this.shiftId = req.query.shiftId ? req.query.shiftId : null; 
     this.reportTypeId = req.query.reportTypeId ? req.query.reportTypeId : 0; 
+  }
+}
+class generateDetailedReportExcel {
+  constructor(req) {
+    this.fromDate = req.body.fromDate ? req.body.fromDate : null;
+    this.toDate = req.body.toDate ? req.body.toDate : null;
+    this.categoryId =
+      req.body.categoryId !== undefined && req.body.categoryId !== null
+        ? Number(req.body.categoryId)
+        : 0;
+    this.userTypeRole = req.body.userTypeRole ? req.body.userTypeRole : 0;
+  }
+}
+
+// reports (API JSON)
+class packagesSoldByCategory {
+  constructor(req) {
+    this.fromDate = req.query.fromDate ? req.query.fromDate : null;
+    this.toDate = req.query.toDate ? req.query.toDate : null;
+    this.categoryId =
+      req.query.categoryId !== undefined && req.query.categoryId !== null
+        ? Number(req.query.categoryId)
+        : 0;
+    this.categoryName = req.query.categoryName ? String(req.query.categoryName) : null;
   }
 }
 
@@ -171,4 +196,6 @@ module.exports.generateReports = generateReports;
 module.exports.generateNoShowReport = generateNoShowReport;
 module.exports.cashierReport = cashierReport;
 module.exports.cashierReportShiftWise = cashierReportShiftWise;
+module.exports.generateDetailedReportExcel = generateDetailedReportExcel;
+module.exports.packagesSoldByCategory = packagesSoldByCategory;
 

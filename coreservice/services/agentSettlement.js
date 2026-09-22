@@ -95,6 +95,25 @@ const agentSettlementService = {
       throw functionContext.error;
     }
   },
+  getAgentSettlementTransactions: async (functionContext, resolvedResult) => {
+    let logger = functionContext.logger;
+    logger.logInfo("getAgentSettlementTransactions() :: DB :: Invoked !");
+    try {
+      let rows = await dbconfig.knex.raw(
+        `CALL usp_get_agent_settlement_transactions(:userId, :settlementMonth, :userTypeId)`,
+        {
+          userId: resolvedResult.userId,
+          settlementMonth: resolvedResult.settlementMonth,
+          userTypeId: resolvedResult.userTypeId,
+        }
+      );
+      return rows[0][0] ? rows[0][0] : [];
+    } catch (err) {
+      logger.logInfo(`getAgentSettlementTransactions() :: Error :: ${JSON.stringify(err)}`);
+      functionContext.error = new errorModel.ErrorModel(constant.errorMessage.dbError, constant.errorCode.dbError);
+      throw functionContext.error;
+    }
+  },
   getAgentSettlements: async (functionContext, resolvedResult) => {
     let logger = functionContext.logger;
 

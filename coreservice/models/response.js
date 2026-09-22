@@ -1,283 +1,343 @@
-    //users
-  class addUser {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
+//users
+class getAllCategories {
+  constructor() {
+    this.Error = null;
+    this.Details = null;
   }
-  class countDriverBookings {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class updateUser {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class deleteUser {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class getUser {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class getUserById {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class getUserByPhone {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class addQRLink {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class uploadQRFile {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
+}
 
-  //discounts for website
-  class addWebsiteDiscount {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
+class getCategoryPackages {
+  constructor() {
+    this.Error = null;
+    this.Details = null;
   }
-  class updateWebsiteDiscount {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class deleteWebsiteDiscount {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class fetchWebsiteDiscount {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class fetchEnabledWebsiteDiscount {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
+}
 
+class updateCategoryPackages {
+  constructor() {
+    this.Error = null;
+    this.Details = null;
+  }
+}
 
-  //coupons
-  class fetchCoupons {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
+class updateCategoryDiscount {
+  constructor() {
+    this.Error = null;
+    this.Details = null;
   }
-  class deleteCoupon {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class getCouponByInitial {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class addCoupon {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class updateCoupon {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class updateUsedCoupons {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
+}
 
-  //Package
-  class fetchPackages {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
+class addCategoryDiscount {
+  constructor() {
+    this.Error = null;
+    this.Details = null;
   }
-  class addPackage {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class updatePackage {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class deletePackage {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
-  class getPackageDetails {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
-  }
+}
 
-    //discounts for Panel
-    class addPanelDiscount {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-    class updatePanelDiscount {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-    class deletePanelDiscount {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-    class fetchPanelDiscount {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-    class getEnabledPanelDiscounts {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
+class deleteCategoryDiscount {
+  constructor() {
+    this.Error = null;
+    this.Details = null;
+  }
+}
+
+module.exports.getAllCategories = getAllCategories;
+module.exports.getCategoryPackages = getCategoryPackages;
+module.exports.updateCategoryPackages = updateCategoryPackages;
+module.exports.updateCategoryDiscount = updateCategoryDiscount;
+module.exports.addCategoryDiscount = addCategoryDiscount;
+module.exports.deleteCategoryDiscount = deleteCategoryDiscount;
+
+class addUser {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+
+class countDriverBookings {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class updateUser {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class deleteUser {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class getUser {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class getUserById {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class getUserByPhone {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class usersByCategory {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class addQRLink {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class uploadQRFile {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+
+//discounts for website
+class addWebsiteDiscount {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class updateWebsiteDiscount {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class deleteWebsiteDiscount {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class fetchWebsiteDiscount {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class fetchEnabledWebsiteDiscount {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
 
 
-    //Future booking date
-    class fetchFutureBookingDate {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-    class addUpdateFutureBookingDate {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
+//coupons
+class fetchCoupons {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class deleteCoupon {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class getCouponByInitial {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class addCoupon {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class updateCoupon {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class updateUsedCoupons {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
 
-    //Outlets
-    class openOutlet {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-    class closeOutlet {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-    class checkCurrentOutlet {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-    class checkActiveOutlet {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-  
-    //Shifts
-    class checkShiftForUser {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-    class openShift {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-    class closeShift {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-    class reopenShift {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-    class recentShiftForOutlet {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
+//Package
+class fetchPackages {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class addPackage {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class updatePackage {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class deletePackage {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class getPackageDetails {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
 
-    //Agent Settlement
-    class addUpdateAgentSettlement {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-    class agentMonthlySettlement {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-    class getAgentSettlements {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
+//discounts for Panel
+class addPanelDiscount {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class updatePanelDiscount {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class deletePanelDiscount {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class fetchPanelDiscount {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class getEnabledPanelDiscounts {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
 
-    //URL mapping
-    class shortenURL {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-  
-    class getLongURL {
-      constructor() {
-        (this.Error = null), (this.Details = null);
-      }
-    }
-  
-  //Agent Discount QR
-  class addAgentDiscount {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
+
+//Future booking date
+class fetchFutureBookingDate {
+  constructor() {
+    (this.Error = null), (this.Details = null);
   }
-  class updateAgentDiscount {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
+}
+class addUpdateFutureBookingDate {
+  constructor() {
+    (this.Error = null), (this.Details = null);
   }
-  class getAgentDiscount {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
+}
+
+//Outlets
+class openOutlet {
+  constructor() {
+    (this.Error = null), (this.Details = null);
   }
-  class getAgentDiscountUsingDiscountCode {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
+}
+class closeOutlet {
+  constructor() {
+    (this.Error = null), (this.Details = null);
   }
-  class uploadAgentDiscountQRFile {
-    constructor() {
-      (this.Error = null), (this.Details = null);
-    }
+}
+class checkCurrentOutlet {
+  constructor() {
+    (this.Error = null), (this.Details = null);
   }
-   
+}
+class checkActiveOutlet {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+
+//Shifts
+class checkShiftForUser {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class openShift {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class closeShift {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class reopenShift {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class recentShiftForOutlet {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+
+//Agent Settlement
+class addUpdateAgentSettlement {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class agentMonthlySettlement {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class getAgentSettlements {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class getAgentSettlementTransactions {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+
+//URL mapping
+class shortenURL {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+
+class getLongURL {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+
+//Agent Discount QR
+class addAgentDiscount {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class updateAgentDiscount {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class getAgentDiscount {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class getAgentDiscountUsingDiscountCode {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+class uploadAgentDiscountQRFile {
+  constructor() {
+    (this.Error = null), (this.Details = null);
+  }
+}
+
 
 //users
 // module.exports.getSitesResponse = getSites;
@@ -287,6 +347,7 @@ module.exports.deleteUser = deleteUser;
 module.exports.getUser = getUser;
 module.exports.getUserById = getUserById;
 module.exports.getUserByPhone = getUserByPhone;
+module.exports.usersByCategory = usersByCategory;
 module.exports.addQRLink = addQRLink;
 module.exports.countDriverBookings = countDriverBookings;
 module.exports.uploadQRFile = uploadQRFile;
@@ -343,6 +404,7 @@ module.exports.recentShiftForOutlet = recentShiftForOutlet;
 module.exports.addUpdateAgentSettlement = addUpdateAgentSettlement;
 module.exports.agentMonthlySettlement = agentMonthlySettlement;
 module.exports.getAgentSettlements = getAgentSettlements;
+module.exports.getAgentSettlementTransactions = getAgentSettlementTransactions;
 
 //URL mapping
 module.exports.shortenURL = shortenURL;

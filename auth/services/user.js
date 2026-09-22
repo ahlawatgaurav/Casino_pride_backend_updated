@@ -21,7 +21,21 @@ const userService = {
       //   `validateUserDB() :: Returned Result :: ${JSON.stringify(rows[0][0])}`
       // );
 
-      return rows[0][0][0] ? rows[0][0][0] : null;
+      const user = rows[0][0][0] ? rows[0][0][0] : null;
+
+      if (user?.CategoryId && !user.CategoryName) {
+        const category = await dbconfig
+          .knex("CategoryMaster")
+          .select("Category as CategoryName")
+          .where("idCategoryMaster", user.CategoryId)
+          .first();
+
+        if (category?.CategoryName) {
+          user.CategoryName = category.CategoryName;
+        }
+      }
+
+      return user;
     } catch (errValidateUserDB) {
       logger.logInfo(
         `validateUserDB() :: Error :: ${JSON.stringify(errValidateUserDB)}`

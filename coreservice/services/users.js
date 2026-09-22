@@ -3,7 +3,7 @@ const errorModel = require("../models/error");
 const constant = require("../utils/constant");
 
 const userService = {
- 
+
   addUser: async (functionContext, resolvedResult) => {
     let logger = functionContext.logger;
 
@@ -20,7 +20,7 @@ const userService = {
         :userName,
         :password,
         :userType,
-        :discountPercent,
+        :categoryId,
         :monthlySettlement,
         :QRLink,
         :NumOfBookings,
@@ -37,7 +37,7 @@ const userService = {
           userName: resolvedResult.userName,
           password: resolvedResult.password,
           userType: resolvedResult.userType,
-          discountPercent: resolvedResult.discountPercent,
+          categoryId: resolvedResult.categoryId,
           monthlySettlement: resolvedResult.monthlySettlement,
           QRLink: resolvedResult.QRLink,
           NumOfBookings: resolvedResult.NumOfBookings,
@@ -61,11 +61,11 @@ const userService = {
       if (err.sqlState && err.sqlState == constant.errorCode.phoneExists) {
         errorCode = constant.errorCode.phoneExists;
         errorMessage = constant.errorMessage.phoneExists;
-      } else if(err.sqlState && err.sqlState == constant.errorCode.emailExists) {
+      } else if (err.sqlState && err.sqlState == constant.errorCode.emailExists) {
         errorCode = constant.errorCode.emailExists;
         errorMessage = constant.errorMessage.emailExists;
       }
-      
+
       else {
         errorCode = constant.errorCode.dbError;
         errorMessage = constant.errorMessage.dbError;
@@ -85,49 +85,33 @@ const userService = {
     logger.logInfo("updateUser() :: DB :: Invoked !");
 
     try {
-      let rows = await dbconfig.knex.raw(
-        `CALL usp_update_users(
-        :userId,
-        :userRef,
-        :firebaseUUID,
-        :name,
-        :address,
-        :email,
-        :phone,
-        :userName,
-        :password,
-        :userType,
-        :discountPercent,
-        :monthlySettlement,
-        :QRLink,
-        :NumOfBookings,
-        :isUserEnabled,
-        :isActive,
-        :currentTs
-        )`,
-        {
-          userId:resolvedResult.userId,
-          userRef:resolvedResult.userRef,
-          firebaseUUID: resolvedResult.firebaseUUID,
-          name: resolvedResult.name,
-          address: resolvedResult.address,
-          email: resolvedResult.email,
-          phone: resolvedResult.phone,
-          userName: resolvedResult.userName,
-          password: resolvedResult.password,
-          userType: resolvedResult.userType,
-          discountPercent: resolvedResult.discountPercent,
-          monthlySettlement: resolvedResult.monthlySettlement,
-          QRLink: resolvedResult.QRLink,
-          NumOfBookings: resolvedResult.NumOfBookings,
-          isUserEnabled: resolvedResult.isUserEnabled,
-          isActive: resolvedResult.isActive,
-          currentTs: functionContext.currentTs,
-        }
-      );
+      const updateData = {
+        Ref: resolvedResult.userRef,
+        UUID: resolvedResult.firebaseUUID,
+        Name: resolvedResult.name,
+        Address: resolvedResult.address,
+        Email: resolvedResult.email,
+        Phone: resolvedResult.phone,
+        Username: resolvedResult.userName,
+        Password: resolvedResult.password,
+        UserType: resolvedResult.userType,
+        CategoryId: resolvedResult.categoryId,
+        MonthlySettlement: resolvedResult.monthlySettlement,
+        QRLink: resolvedResult.QRLink,
+        NumOfBookings: resolvedResult.NumOfBookings,
+        IsUserEnabled: resolvedResult.isUserEnabled,
+        IsActive: resolvedResult.isActive,
+        UpdatedOn: functionContext.currentTs,
+      };
 
+      if (resolvedResult.discountPercent !== undefined && resolvedResult.discountPercent !== null) {
+        updateData.DiscountPercent = resolvedResult.discountPercent;
+      }
 
-      return rows[0][0][0] ? rows[0][0][0] : null;
+      await dbconfig.knex("users").where({ Id: resolvedResult.userId }).update(updateData);
+
+      const updated = await dbconfig.knex("users").where({ Id: resolvedResult.userId }).first();
+      return updated || null;
     } catch (err) {
       logger.logInfo(`updateUser() :: Error :: ${JSON.stringify(err)}`);
 
@@ -161,7 +145,7 @@ const userService = {
         :userId
         )`,
         {
-          userId:resolvedResult.userId,
+          userId: resolvedResult.userId,
         }
       );
 
@@ -198,7 +182,32 @@ const userService = {
         userType: resolvedResult.userType,
       });
 
-      return rows[0][0] ? rows[0][0] : null;
+      let users = rows[0][0] ? rows[0][0] : null;
+
+      if (resolvedResult.userType == 11 && users) {
+        try {
+          // Fetch categories to join CategoryName
+          const catRows = await dbconfig.knex.raw(`CALL usp_get_category_master()`);
+          const categories = catRows[0][0];
+
+          if (categories) {
+            users = users.map((user) => {
+              const category = categories.find((c) => c.Id === user.CategoryId);
+              return {
+                ...user,
+                CategoryName: category ? category.Name : "-",
+                CategoryDiscount: category ? category.DiscountPercent : 0,
+                CategoryCommission: category ? category.CommissionPercent : 0,
+              };
+            });
+          }
+        } catch (catErr) {
+          logger.logInfo(`getUser() :: Category Join Error :: ${JSON.stringify(catErr)}`);
+          // Continue without category details if it fails
+        }
+      }
+
+      return users;
     } catch (err) {
       logger.logInfo(`getUser() :: DB :: Error :: ${JSON.stringify(err)}`);
       let errorCode = constant.errorCode.dbError;
@@ -230,13 +239,110 @@ const userService = {
       logger.logInfo(`getUserById() :: DB :: Error :: ${JSON.stringify(err)}`);
       let errorCode = constant.errorCode.dbError;
       let errorMessage = constant.errorMessage.dbError;
-      
-        errorCode = constant.errorCode.dbError;
-        errorMessage = constant.errorMessage.dbError;
-      
+
+      errorCode = constant.errorCode.dbError;
+      errorMessage = constant.errorMessage.dbError;
+
       functionContext.error = new errorModel.ErrorModel(
         errorMessage,
         errorCode
+      );
+      throw functionContext.error;
+    }
+  },
+  getAgentByUUID: async (functionContext, uuid) => {
+    try {
+      const agent = await dbconfig.knex("users")
+        .select("Id", "Name", "Phone", "Email", "UUID", "UserType", "CategoryId", "QRLink", "IsUserEnabled")
+        .where({ UUID: uuid, IsActive: 1 })
+        .first();
+      return agent || null;
+    } catch (err) {
+      const errorModel = require("../models/error");
+      const constant = require("../utils/constants");
+      functionContext.error = new errorModel.ErrorModel(constant.errorMessage.dbError, constant.errorCode.dbError);
+      throw functionContext.error;
+    }
+  },
+  usersByCategory: async (functionContext, resolvedResult) => {
+    const logger = functionContext.logger;
+    logger.logInfo("usersByCategory() :: DB :: Invoked !");
+
+    try {
+      const categoryId = Number(resolvedResult.categoryId);
+      const includeInactive = Number(resolvedResult.includeInactive || 0);
+      const q = resolvedResult.q ? String(resolvedResult.q).trim() : "";
+      const page = Number(resolvedResult.page || 1);
+      const pageSize = Number(resolvedResult.pageSize || 50);
+
+      const baseQuery = dbconfig.knex("users as u")
+        .leftJoin("CategoryMaster as cm", "cm.idCategoryMaster", "u.CategoryId")
+        .where("u.CategoryId", categoryId);
+
+      if (!includeInactive) {
+        baseQuery.andWhere("u.IsActive", 1);
+      }
+
+      if (q) {
+        baseQuery.andWhere((qb) => {
+          qb.where("u.Name", "like", `%${q}%`)
+            .orWhere("u.Phone", "like", `%${q}%`)
+            .orWhere("u.Email", "like", `%${q}%`);
+        });
+      }
+
+      const countRow = await baseQuery
+        .clone()
+        .clearSelect()
+        .clearOrder()
+        .count({ total: "*" })
+        .first();
+      const total = countRow ? Number(countRow.total || 0) : 0;
+
+      const users = await baseQuery
+        .clone()
+        .select(
+          "u.Id",
+          "u.Name",
+          "u.Phone",
+          "u.Email",
+          "u.IsUserEnabled",
+          "u.UserType",
+          "u.CategoryId",
+          "u.IsActive",
+          "cm.Category as CategoryName"
+        )
+        .orderByRaw("CASE WHEN u.Name IS NULL OR u.Name = '' THEN 1 ELSE 0 END, u.Name ASC, u.Id ASC")
+        .limit(pageSize)
+        .offset((page - 1) * pageSize);
+
+      const category = users && users.length
+        ? { CategoryId: categoryId, CategoryName: users[0].CategoryName || "-" }
+        : (() => null)();
+
+      // If there are no users, still fetch category name for UI header
+      let categoryInfo = category;
+      if (!categoryInfo) {
+        const cm = await dbconfig.knex("CategoryMaster")
+          .select("idCategoryMaster as CategoryId", "Category as CategoryName")
+          .where("idCategoryMaster", categoryId)
+          .first();
+        categoryInfo = cm || { CategoryId: categoryId, CategoryName: "-" };
+      }
+
+      return {
+        category: categoryInfo,
+        users: users || [],
+        total,
+        page,
+        pageSize,
+      };
+    } catch (err) {
+      logger.logInfo(`usersByCategory() :: DB :: Error :: ${JSON.stringify(err)}`);
+
+      functionContext.error = new errorModel.ErrorModel(
+        constant.errorMessage.dbError,
+        constant.errorCode.dbError
       );
       throw functionContext.error;
     }
@@ -254,10 +360,10 @@ const userService = {
       logger.logInfo(`getUserByPhone() :: DB :: Error :: ${JSON.stringify(err)}`);
       let errorCode = constant.errorCode.dbError;
       let errorMessage = constant.errorMessage.dbError;
-      
-        errorCode = constant.errorCode.dbError;
-        errorMessage = constant.errorMessage.dbError;
-      
+
+      errorCode = constant.errorCode.dbError;
+      errorMessage = constant.errorMessage.dbError;
+
       functionContext.error = new errorModel.ErrorModel(
         errorMessage,
         errorCode
@@ -286,8 +392,8 @@ const userService = {
       //   errorCode = constant.errorCode.invalidUserType;
       //   errorMessage = constant.errorMessage.invalidUserType;
       // } else {
-        errorCode = constant.errorCode.dbError;
-        errorMessage = constant.errorMessage.dbError;
+      errorCode = constant.errorCode.dbError;
+      errorMessage = constant.errorMessage.dbError;
       // }
       functionContext.error = new errorModel.ErrorModel(
         errorMessage,
@@ -323,10 +429,10 @@ const userService = {
       let errorCode = constant.errorCode.dbError;
       let errorMessage = constant.errorMessage.dbError;
 
-    
-        errorCode = constant.errorCode.dbError;
-        errorMessage = constant.errorMessage.dbError;
-      
+
+      errorCode = constant.errorCode.dbError;
+      errorMessage = constant.errorMessage.dbError;
+
 
       functionContext.error = new errorModel.ErrorModel(
         errorMessage,
@@ -336,7 +442,7 @@ const userService = {
       throw functionContext.error;
     }
   },
-  uploadQRFile: async (functionContext, resolvedResult,fileURL) => {
+  uploadQRFile: async (functionContext, resolvedResult, fileURL) => {
     let logger = functionContext.logger;
 
     logger.logInfo("uploadQRFile() :: DB :: Invoked !");
@@ -348,9 +454,9 @@ const userService = {
         :qrFile
         )`,
         {
-            userId:resolvedResult.userId,
-            // ackFile:resolvedResult.fileUploadDetails,
-            qrFile:fileURL,
+          userId: resolvedResult.userId,
+          // ackFile:resolvedResult.fileUploadDetails,
+          qrFile: fileURL,
         }
       );
 
@@ -366,7 +472,7 @@ const userService = {
       if (err.sqlState && err.sqlState == constant.errorCode.noUser) {
         errorCode = constant.errorCode.noUser;
         errorMessage = constant.errorMessage.noUser;
-      } 
+      }
       else {
         errorCode = constant.errorCode.dbError;
         errorMessage = constant.errorMessage.dbError;
@@ -378,6 +484,18 @@ const userService = {
       );
 
       throw functionContext.error;
+    }
+  },
+  getAllCategories: async (functionContext) => {
+    let logger = functionContext.logger;
+    logger.logInfo("getAllCategories() :: DB :: Invoked !");
+    try {
+      let rows = await dbconfig.knex.raw(`CALL usp_get_category_master()`);
+      return rows[0][0] ? rows[0][0] : [];
+    } catch (err) {
+      logger.logInfo(`getAllCategories() :: DB :: Error :: ${JSON.stringify(err)}`);
+      // Return empty array on error to allow flow to continue without categories
+      return [];
     }
   },
 };

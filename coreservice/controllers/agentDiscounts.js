@@ -10,7 +10,19 @@ const validate = require("../utils/validation");
 const AWS = require("aws-sdk");
 const FileUploadFunction = require("../utils/fileUpload").FileUploadFunction;
 const fs = require("fs")
-require("dotenv").config({ path: __dirname + "/.env" });
+// require("dotenv").config({ path: __dirname + "/.env" });
+const path = require("path");
+const dotenv = require("dotenv");
+
+const envFile =
+  process.env.NODE_ENV === "production"
+    ? ".env.production"
+    : ".env.local";
+
+dotenv.config({
+  path: path.join(__dirname, envFile),
+});
+
 
 const agentDiscount = {
   addAgentDiscount: async (req, res) => {

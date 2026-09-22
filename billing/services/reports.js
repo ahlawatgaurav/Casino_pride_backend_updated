@@ -447,14 +447,15 @@ const reportsService = {
         :userId,
         :userType,
         :settlementUpdateDate,
-	:settlementMonth
+        :settlementMonth,
+        :settlementFromDate
         )`,
         {
             userId:resolvedResult.userId,
             userType:resolvedResult.userType,
             settlementUpdateDate:resolvedResult.settlementUpdateDate,
-		settlementMonth:resolvedResult.settlementMonth // new adgent settlement
-            // settlementDate:resolvedResult.settlementDate,
+            settlementMonth:resolvedResult.settlementMonth,
+            settlementFromDate:resolvedResult.settlementFromDate || null,
         }
       );
 
@@ -486,6 +487,124 @@ const reportsService = {
         errorCode
       );
 
+      throw functionContext.error;
+    }
+  },
+
+  // API JSON report: packages sold by category (source) between bill dates
+  packagesSoldByCategory: async (functionContext, resolvedResult) => {
+    const logger = functionContext.logger;
+    logger.logInfo("packagesSoldByCategory() :: DB :: Invoked !");
+
+    try {
+      const fromDate = resolvedResult.fromDate;
+      const toDate = resolvedResult.toDate;
+
+      const rows = await dbconfig.knex("billing as bl")
+        .join("bookings as b", "b.Id", "bl.BookingId")
+        .join("users as u", "u.Id", "b.UserId")
+        .leftJoin("categorymaster as cm", "cm.idCategoryMaster", "u.CategoryId")
+        .where("bl.IsActive", 1)
+        .andWhere("bl.BillDate", ">=", fromDate)
+        .andWhere("bl.BillDate", "<=", toDate)
+        .andWhere((qb) => {
+          qb.whereNull("bl.IsVoid").orWhere("bl.IsVoid", 0);
+        })
+        .select(
+          "bl.Id as BillId",
+          "bl.BookingId",
+          "bl.BillDate",
+          "bl.PackageId",
+          "bl.PackageGuestCount",
+          "bl.TotalGuestCount as PaxCount",
+          "b.NumOfKids as ChildrenCount",
+          "u.CategoryId",
+          "cm.Category as CategoryName"
+        );
+
+      const safeParseIdList = (value) => {
+        if (value === null || value === undefined) return [];
+        // value looks like: [1,3] or ["1","3"] or "1,3"
+        const s = String(value).trim();
+        const normalized = s.replace(/^\[/, "").replace(/\]$/, "").replace(/\"/g, "");
+        if (!normalized) return [];
+        return normalized
+          .split(",")
+          .map((x) => Number(String(x).trim()))
+          .filter((n) => Number.isFinite(n) && n > 0);
+      };
+
+      // Gather all packageIds across the date range so we can map -> PackageName
+      const allPackageIds = new Set();
+      for (const r of rows || []) {
+        for (const pid of safeParseIdList(r.PackageId)) allPackageIds.add(pid);
+      }
+
+      const packageIdArr = Array.from(allPackageIds);
+      const packageNameById = new Map();
+      if (packageIdArr.length) {
+        const pkgs = await dbconfig.knex("packages")
+          .select("Id", "PackageName")
+          .whereIn("Id", packageIdArr)
+          .where("IsActive", 1)
+          .where("IsPackageEnabled", 1);
+        (pkgs || []).forEach((p) => packageNameById.set(Number(p.Id), p.PackageName));
+      }
+
+      // Aggregate per category
+      const categoryMap = new Map(); // key: CategoryId (number|null) -> aggregate row
+      const packageColumnsSet = new Set();
+
+      for (const r of rows || []) {
+        const categoryId = r.CategoryId !== undefined && r.CategoryId !== null ? Number(r.CategoryId) : 0;
+        const categoryName = r.CategoryName || "Unknown";
+
+        if (!categoryMap.has(categoryId)) {
+          categoryMap.set(categoryId, {
+            CategoryId: categoryId,
+            CategoryName: categoryName,
+            PaxCount: 0,
+            ChildrenCount: 0,
+            Packages: {},
+          });
+        }
+
+        const agg = categoryMap.get(categoryId);
+        agg.PaxCount += Number(r.PaxCount || 0);
+        agg.ChildrenCount += Number(r.ChildrenCount || 0);
+
+        const pids = safeParseIdList(r.PackageId);
+        for (const pid of pids) {
+          const name = packageNameById.get(pid) || `Package_${pid}`;
+          packageColumnsSet.add(name);
+          agg.Packages[name] = (agg.Packages[name] || 0) + 1;
+        }
+      }
+
+      // Ensure every row has all package columns with 0, for stable FE rendering
+      const packageColumns = Array.from(packageColumnsSet).sort((a, b) => String(a).localeCompare(String(b)));
+      const rowsOut = Array.from(categoryMap.values()).map((row) => {
+        for (const col of packageColumns) {
+          if (row.Packages[col] === undefined) row.Packages[col] = 0;
+        }
+        return row;
+      });
+
+      // Sort rows by CategoryName
+      rowsOut.sort((a, b) => String(a.CategoryName).localeCompare(String(b.CategoryName)));
+
+      return {
+        fromDate,
+        toDate,
+        packageColumns,
+        rows: rowsOut,
+      };
+    } catch (err) {
+      logger.logInfo(`packagesSoldByCategory() :: Error :: ${JSON.stringify(err)}`);
+      functionContext.error = new errorModel.ErrorModel(
+        constant.errorMessage.dbError,
+        constant.errorCode.dbError
+      );
       throw functionContext.error;
     }
   },

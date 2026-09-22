@@ -113,6 +113,59 @@ const futureBookingDateController = {
     }
   },
 
+  deleteBlockedDatePeriod: async (req, res) => {
+    let logger = new applib.Logger(req.originalUrl);
+
+    logger.logInfo(`deleteBlockedDatePeriod() invoked!!`);
+
+    let functionContext = {
+      error: null,
+      res: res,
+      logger: logger,
+      currentTs: momentTimezone
+        .utc(new Date(), "YYYY-MM-DD HH:mm:ss")
+        .tz("Asia/Kolkata")
+        .format("YYYY-MM-DD HH:mm:ss "),
+    };
+
+    const responseObj = {
+      name: "deleteBlockedDatePeriod",
+      model: new responseModel.addUpdateFutureBookingDate(),
+    };
+
+    const blockedDateId = req.query?.blockedDateId
+      ? Number(req.query.blockedDateId)
+      : 0;
+
+    if (!blockedDateId) {
+      functionContext.error = new ErrorModel(
+        "blockedDateId is required",
+        errorCode.invalidRequest
+      );
+      response(functionContext, responseObj, null);
+      return;
+    }
+
+    try {
+      const result = await futureBookingDateService.deleteBlockedDatePeriod(
+        functionContext,
+        { blockedDateId }
+      );
+      response(functionContext, responseObj, result);
+    } catch (err) {
+      if (!err.ErrorMessage && !err.ErrorCode) {
+        functionContext.error = new ErrorModel(
+          errorMessage.applicationError,
+          errorCode.applicationError
+        );
+      }
+      logger.logInfo(
+        `deleteBlockedDatePeriod :: Error :: ${JSON.stringify(err)}`
+      );
+      response(functionContext, responseObj, null);
+    }
+  },
+
 };
 
 module.exports = futureBookingDateController;

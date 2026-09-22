@@ -19,6 +19,47 @@ const AWS = require("aws-sdk");
 
 const reportsRowWise = require("../utils/Reports");
 const { title } = require("process");
+const userService = require("../../coreservice/services/users");
+const excelReport = require("../utils/excelReport");
+
+// A tax invoice must show tax on the actually-charged (post-discount) amount. When a
+// discount is applied, the stored UpdatedItemDetails keeps the pre-discount Rate/TaxDiff/
+// CGST/SGST while TotalBillAmount is post-discount, so they don't reconcile. This scales
+// base+tax down by the same proportion so the report matches the printed bill. It ONLY
+// touches discounted bills (factor < 1); non-discounted bills are returned unchanged.
+const __scaleItemDetailsForDiscount = (itemDetails) => {
+  try {
+    if (!itemDetails || typeof itemDetails !== "object") return itemDetails;
+    const rate = parseFloat(itemDetails.Rate);
+    const total = parseFloat(itemDetails.TotalBillAmount);
+    if (isNaN(rate) || isNaN(total) || total <= 0) return itemDetails;
+    // Use the actual printed tax (CGST/SGST/VAT bifurcation keys) for the reconciliation,
+    // NOT TaxDiff — TaxDiff is sometimes stored stale/inconsistent, which made already-
+    // correct discounted bills get scaled a second time (short amounts in the report).
+    let taxSum = 0;
+    Object.keys(itemDetails).forEach((k) => {
+      if (/CGST|SGST|VAT/i.test(k)) {
+        const tv = parseFloat(itemDetails[k]);
+        if (!isNaN(tv)) taxSum += tv;
+      }
+    });
+    const gross = rate + taxSum;
+    if (gross <= 0) return itemDetails;
+    const factor = total / gross;
+    // If base + tax already reconciles to the charged total, the bill is correct -> leave it.
+    // Only scale DOWN older bills whose base+tax was stored at the pre-discount value (factor < 1).
+    if (factor >= 0.999) return itemDetails;
+    Object.keys(itemDetails).forEach((k) => {
+      if (k === "Rate" || k === "TaxDiff" || /CGST|SGST|VAT/i.test(k)) {
+        const v = parseFloat(itemDetails[k]);
+        if (!isNaN(v)) itemDetails[k] = Math.round(v * factor * 100) / 100;
+      }
+    });
+    return itemDetails;
+  } catch (e) {
+    return itemDetails;
+  }
+};
 
 const reportsController = {
   generateReports: async (req, res) => {
@@ -85,7 +126,7 @@ const reportsController = {
           TeensTax = item.TeensTax;
           const itemDetails =
             item?.UpdatedItemDetails != null &&
-            JSON.parse(item?.UpdatedItemDetails?.replace(/'/g, '"'));
+            __scaleItemDetailsForDiscount(JSON.parse(item?.UpdatedItemDetails?.replace(/'/g, '"')));
           if (Object.keys(itemDetails).length !== 0) {
             // Extract key-value pairs and assign them to UpdatedItemDetails
             item.UpdatedItemDetails = Object.entries(itemDetails)
@@ -368,7 +409,7 @@ const reportsController = {
   item["SGST 20 %"] = parseFloat(item["SGST 20 %"]) || 0;
       const itemDetails =
         item?.UpdatedItemDetails != null &&
-        JSON.parse(item?.UpdatedItemDetails?.replace(/'/g, '"'));
+        __scaleItemDetailsForDiscount(JSON.parse(item?.UpdatedItemDetails?.replace(/'/g, '"')));
 
       if (Object.keys(itemDetails).length !== 0) {
         item.UpdatedItemDetails = Object.entries(itemDetails)
@@ -596,7 +637,7 @@ console.log('Gst 14 total confirmation',calculateSum(nonVoidRows, "CGST 14 %"))
           TeensTax = item.TeensTax;
           const itemDetails =
             item?.UpdatedItemDetails != null &&
-            JSON.parse(item?.UpdatedItemDetails?.replace(/'/g, '"'));
+            __scaleItemDetailsForDiscount(JSON.parse(item?.UpdatedItemDetails?.replace(/'/g, '"')));
           // Check if UpdatedItemDetails is not an empty object
           if (Object.keys(itemDetails).length !== 0) {
             // Extract key-value pairs and assign them to UpdatedItemDetails
@@ -875,7 +916,7 @@ item["CGST 14 %"] = parseFloat(item["CGST 14 %"]) || 0;
 item["SGST 14 %"] = parseFloat(item["SGST 14 %"]) || 0;
       const itemDetails =
         item?.UpdatedItemDetails != null &&
-        JSON.parse(item?.UpdatedItemDetails?.replace(/'/g, '"'));
+        __scaleItemDetailsForDiscount(JSON.parse(item?.UpdatedItemDetails?.replace(/'/g, '"')));
 
       if (Object.keys(itemDetails).length !== 0) {
         item.UpdatedItemDetails = Object.entries(itemDetails)
@@ -1107,7 +1148,7 @@ columns,
       generateReportsDBResult.forEach((item) => { TeensTax = item.TeensTax;
         const itemDetails =
           item?.UpdatedItemDetails != null &&
-          JSON.parse(item?.UpdatedItemDetails?.replace(/'/g, '"'));
+          __scaleItemDetailsForDiscount(JSON.parse(item?.UpdatedItemDetails?.replace(/'/g, '"')));
   
         if (Object.keys(itemDetails).length !== 0) {
           item.UpdatedItemDetails = Object.entries(itemDetails)
@@ -1335,7 +1376,7 @@ columns,
             TeensTax = item.TeensTax;
             const itemDetails =
               item?.UpdatedItemDetails != null &&
-              JSON.parse(item?.UpdatedItemDetails?.replace(/'/g, '"'));
+              __scaleItemDetailsForDiscount(JSON.parse(item?.UpdatedItemDetails?.replace(/'/g, '"')));
             // Check if UpdatedItemDetails is not an empty object
             if (Object.keys(itemDetails).length !== 0) {
               // Extract key-value pairs and assign them to UpdatedItemDetails
@@ -1742,7 +1783,7 @@ console.log("inside fake repirt")
             TeensTax = item.TeensTax;
             const itemDetails =
               item?.UpdatedItemDetails != null &&
-              JSON.parse(item?.UpdatedItemDetails?.replace(/'/g, '"'));
+              __scaleItemDetailsForDiscount(JSON.parse(item?.UpdatedItemDetails?.replace(/'/g, '"')));
             // Check if UpdatedItemDetails is not an empty object
             if (Object.keys(itemDetails).length !== 0) {
               // Extract key-value pairs and assign them to UpdatedItemDetails
@@ -2610,6 +2651,121 @@ console.log("inside fake repirt")
         `cashierReportShiftWiseDBResult :: Error :: ${JSON.stringify(
           errCashierReport
         )}`
+      );
+      response(functionContext, responseObj, null);
+    }
+  },
+  generateDetailedReportExcel: async (req, res) => {
+    let logger = new applib.Logger(req.originalUrl);
+    logger.logInfo(`generateDetailedReportExcel() invoked!!`);
+
+    let functionContext = {
+      error: null,
+      res: res,
+      logger: logger,
+      currentTs: momentTimezone
+        .utc(new Date(), "YYYY-MM-DD HH:mm:ss")
+        .tz("Asia/Kolkata")
+        .format("YYYY-MM-DD HH:mm:ss "),
+    };
+
+    const responseObj = {
+      name: "generateDetailedReportExcel",
+      model: new responseModel.generateDetailedReportExcel(),
+    };
+
+    let request = new requestModel.generateDetailedReportExcel(req);
+    let validateRequest = validate.generateDetailedReportExcel(request);
+
+    if (validateRequest.error) {
+      functionContext.error = new ErrorModel(
+        validateRequest.error.details[0]["message"],
+        errorCode.invalidRequest
+      );
+      logger.logInfo(
+        `generateDetailedReportExcel() :: Invalid Request :: ${JSON.stringify(
+          validateRequest
+        )}`
+      );
+      response(functionContext, responseObj, null);
+      return;
+    }
+
+    try {
+      const baseRows = await reportsService.generateReportsByDateRange(
+        functionContext,
+        request
+      );
+
+      const categories = await userService.getAllCategories(functionContext);
+      const categoryMap = new Map();
+      (categories || []).forEach((cat) => {
+        categoryMap.set(Number(cat.Id), cat.Name);
+      });
+
+      const selectedCategoryId = Number(request.categoryId || 0);
+      const selectedCategoryName = selectedCategoryId
+        ? categoryMap.get(selectedCategoryId)
+        : "All Categories";
+
+      const rows = (baseRows || []).map((item) => {
+        const rowCategoryId =
+          item?.CategoryId != null
+            ? Number(item.CategoryId)
+            : item?.categoryId != null
+            ? Number(item.categoryId)
+            : 0;
+
+        const rowCategoryName =
+          item?.CategoryName ||
+          item?.categoryName ||
+          (rowCategoryId ? categoryMap.get(rowCategoryId) : null) ||
+          "-";
+
+        return {
+          ...item,
+          CategoryId: rowCategoryId || null,
+          CategoryName: rowCategoryName,
+        };
+      });
+
+      const filteredRows =
+        selectedCategoryId === 0
+          ? rows
+          : rows.filter((item) => Number(item.CategoryId || 0) === selectedCategoryId);
+
+      const path = require("path");
+      const excelData = await excelReport.generateExcelReport(
+        filteredRows,
+        {
+          fromDate: request.fromDate,
+          toDate: request.toDate,
+          categoryName: selectedCategoryName || "All Categories",
+          allCount: rows.length,
+          selectedCategoryCount: filteredRows.length,
+        },
+        path.join(__dirname, "../reports/excel"),
+        "Module"
+      );
+
+      response(functionContext, responseObj, {
+        ReportFile: excelData.fileLink,
+        Summary: {
+          allCount: rows.length,
+          selectedCategoryCount: filteredRows.length,
+          selectedCategoryName: selectedCategoryName || "All Categories",
+        },
+        Rows: filteredRows,
+      });
+    } catch (errReport) {
+      if (!errReport.ErrorMessage && !errReport.ErrorCode) {
+        functionContext.error = new ErrorModel(
+          errorMessage.applicationError,
+          errorCode.applicationError
+        );
+      }
+      logger.logInfo(
+        `generateDetailedReportExcel() :: Error :: ${errReport?.message || errReport?.ErrorMessage || JSON.stringify(errReport)} :: STACK: ${errReport?.stack || "no stack"}`
       );
       response(functionContext, responseObj, null);
     }

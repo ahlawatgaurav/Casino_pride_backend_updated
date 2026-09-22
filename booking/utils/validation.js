@@ -15,7 +15,8 @@ module.exports.newBooking = (requestParams) => {
     GSTNumber: joi.string().optional().allow(null),
     governmentId: joi.string().optional().allow(null),
     totalGuestCount: joi.number().optional().allow(0),
-    // numOfKids: joi.number().optional().allow(0),
+    hasKids: joi.number().valid(0, 1).optional().default(0),
+    numOfKids: joi.number().min(0).optional().default(0),
     numOfTeens: joi.number().optional().allow(0),
     discountId: joi.number().optional().allow(0),
     panelDiscountId: joi.number().optional().allow(0),
@@ -31,6 +32,7 @@ module.exports.newBooking = (requestParams) => {
     packageId: joi.string().optional().allow(null),
     packageName: joi.string().optional().allow(null),
     packageGuestCount: joi.string().optional().allow(null),
+    packageDiscounts: joi.string().optional().allow(null),
     packageWeekdayPrice: joi.string().optional().allow(null),
     packageWeekendPrice: joi.string().optional().allow(null),
     // ackFile: joi.number().optional().allow(0),
@@ -56,7 +58,13 @@ module.exports.newBooking = (requestParams) => {
     cardNumber: joi.string().optional().allow(null),
     cardType: joi.string().optional().allow(null),
     isActive: joi.number().required()
-
+  }).custom((value, helpers) => {
+    if (Number(value.hasKids || 0) === 1 && Number(value.numOfKids || 0) < 1) {
+      return helpers.error("any.custom", {
+        message: "numOfKids must be >= 1 when hasKids is 1",
+      });
+    }
+    return value;
   });
   return joiSchema.validate(requestParams);
 };
@@ -129,6 +137,7 @@ module.exports.updateBooking = (requestParams) => {
     packageId: joi.string().optional().allow(null),
     packageName: joi.string().optional().allow(null),
     packageGuestCount: joi.string().optional().allow(null),
+    packageDiscounts: joi.string().optional().allow(null),
     packageWeekdayPrice: joi.string().optional().allow(null),
     packageWeekendPrice: joi.string().optional().allow(null),
     shiftId: joi.number().optional().allow(0),

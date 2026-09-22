@@ -1,4 +1,14 @@
-require("dotenv").config({ path: __dirname + "/.env" });
+const path = require("path");
+const dotenv = require("dotenv");
+
+const envFile =
+  process.env.NODE_ENV === "production"
+    ? ".env.production"
+    : ".env.local";
+
+dotenv.config({
+  path: path.join(__dirname, envFile),
+});
 
 const express = require("express");
 const app = express();
@@ -27,7 +37,11 @@ app.use(function (_req, res, next) {
     "Access-Control-Allow-Methods",
     "GET, POST, PUT, DELETE, PATCH"
   );
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  // Allow frontend apps to send required auth headers (authorization + AuthToken)
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Authorization, AuthToken"
+  );
   res.setHeader("Access-Control-Allow-Credentials", true);
   next();
 });

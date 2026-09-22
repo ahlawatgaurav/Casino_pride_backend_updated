@@ -17,6 +17,8 @@ const nodemailer = require("nodemailer");
 const emailCreds = require("../utils/settings").EmailCreds;
 const AWS = require("aws-sdk");
 
+const dbconfig = require("../config/database");
+
 const billingController = {
   addBillingDetails: async (req, res) => {
     let logger = new applib.Logger(req.originalUrl);
@@ -106,6 +108,29 @@ const billingController = {
       for (const item of addBillingDetailsDBResult) {
         item.ItemDetails = JSON.parse(item.ItemDetails);
       }
+
+      // Auto-recalculate commission if guest count changed at billing time
+      try {
+        const bookingId = addBillingDetailsRequest.bookingId;
+        const billedAmount = parseFloat(addBillingDetailsRequest.amountAfterDiscount);
+        const booking = await dbconfig.knex("bookings")
+          .select("BookingCommision", "AmountAfterDiscount")
+          .where("Id", bookingId)
+          .first();
+        if (booking && booking.BookingCommision > 0 && booking.AmountAfterDiscount > 0 && billedAmount > 0) {
+          const rate = booking.BookingCommision / booking.AmountAfterDiscount;
+          const newCommission = Math.round(rate * billedAmount * 100) / 100;
+          if (Math.abs(newCommission - booking.BookingCommision) > 0.01) {
+            await dbconfig.knex("bookings")
+              .where("Id", bookingId)
+              .update({ BookingCommision: newCommission });
+            logger.logInfo(`Commission recalculated for booking ${bookingId}: ${booking.BookingCommision} → ${newCommission}`);
+          }
+        }
+      } catch (commErr) {
+        logger.logInfo(`Commission recalculation error: ${commErr.message}`);
+      }
+
       response(functionContext, responseObj, addBillingDetailsDBResult);
     } catch (errAddBillingDetails) {
       if (
@@ -2431,6 +2456,28 @@ console.log('start billing',new Date(),getBillingDetailsDBResult.length)
       );
       response(functionContext, responseObj, null);
     }
+  },
+  sendSMS: async (req, res) => {
+    const { phone, amount, shortUrl } = req.body;
+    console.log(`[SMS] request received phone=${phone} amount=${amount} shortUrl=${shortUrl}`);
+    if (!phone || !shortUrl) {
+      console.log(`[SMS] rejected - missing phone or shortUrl`);
+      return res.json({ status: false, error: "phone and shortUrl required" });
+    }
+    const text = `Thank%20you%20for%20choosing%20Casino%20Pride.%20View%20e-bill%20of%20Rs%20${amount}%20at%20-%20${shortUrl}%0ALets%20Play%20with%20Pride%20!%0AGood%20luck%20!%0ACPGOAA`;
+    const apiUrl = `https://commnestsms.com/api/push.json?apikey=635cd8e64fddd&route=transactional&sender=CPGOAA&mobileno=${phone}&text=${text}`;
+    const https = require("https");
+    https.get(apiUrl, (smsRes) => {
+      let data = "";
+      smsRes.on("data", (chunk) => { data += chunk; });
+      smsRes.on("end", () => {
+        console.log(`[SMS] commnestsms response phone=${phone} response=${data}`);
+        res.json({ status: true, data });
+      });
+    }).on("error", (err) => {
+      console.log(`[SMS] commnestsms error phone=${phone} err=${err.message}`);
+      res.json({ status: false, error: err.message });
+    });
   },
 };
 

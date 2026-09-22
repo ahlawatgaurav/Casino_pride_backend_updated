@@ -89,6 +89,16 @@
       (this.Error = null), (this.Details = null);
     }
   }
+  class packagesSoldByCategory {
+    constructor() {
+      (this.Error = null), (this.Details = null);
+    }
+  }
+  class generateDetailedReportExcel {
+    constructor() {
+      (this.Error = null), (this.Details = null);
+    }
+  }
 
 // Billing
 module.exports.addBillingDetails = addBillingDetails;
@@ -102,14 +112,16 @@ module.exports.updateItemDetailsBill = updateItemDetailsBill;
 module.exports.noShowGuestList = noShowGuestList;
 module.exports.fetchVoidBill = fetchVoidBill;
 
-//Payment
+// Payment
 module.exports.addPaymentDetails = addPaymentDetails;
 module.exports.updatePaymentDetails = updatePaymentDetails;
 module.exports.updateBookingId = updateBookingId;
 
-//reports
+// Reports
 module.exports.generateReports = generateReports;
 module.exports.generateNoShowReport = generateNoShowReport;
 module.exports.cashierReport = cashierReport;
 module.exports.cashierReportShiftWise = cashierReportShiftWise;
+module.exports.packagesSoldByCategory = packagesSoldByCategory;
+module.exports.generateDetailedReportExcel = generateDetailedReportExcel;
 

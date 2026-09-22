@@ -6,6 +6,7 @@ module.exports.addBillingDetails = (requestParams) => {
     bookingId: joi.number().required(),
     packageId: joi.string().required(),
     packageGuestCount: joi.string().required(),
+    packageDiscounts: joi.string().optional().allow(null),
     packageWeekdayPrice: joi.string().required(),
     packageWeekendPrice: joi.string().required(),
     totalGuestCount: joi.number().required(),
@@ -132,7 +133,9 @@ module.exports.generateReports = (requestParams) => {
     settlementUpdateDate :joi.string().optional().allow(null),
     isAgentPanel: joi.number().optional().allow(0),
 	  userTypeRole:joi.number().optional().allow(0),
-	  settlementMonth:joi.string().optional().allow(null) // agent settlement
+	  settlementMonth:joi.string().optional().allow(null), // agent settlement
+    settlementFromDate:joi.string().optional().allow(null),
+    settlementToDate:joi.string().optional().allow(null)
   });
   return joiSchema.validate(requestParams);
 };
@@ -155,6 +158,27 @@ module.exports.cashierReportShiftWise = (requestParams) => {
     date: joi.string().required(),
     shiftId: joi.number().required(),
     reportTypeId: joi.number().required(),
+  });
+  return joiSchema.validate(requestParams);
+};
+
+module.exports.generateDetailedReportExcel = (requestParams) => {
+  let joiSchema = joi.object({
+    fromDate: joi.string().required(),
+    toDate: joi.string().required(),
+    categoryId: joi.number().optional().allow(0),
+    userTypeRole: joi.number().optional().allow(0),
+  });
+  return joiSchema.validate(requestParams);
+};
+
+// Reports (API JSON) - packages sold by category
+module.exports.packagesSoldByCategory = (requestParams) => {
+  let joiSchema = joi.object({
+    fromDate: joi.string().required(),
+    toDate: joi.string().required(),
+    categoryId: joi.number().optional().min(1),
+    categoryName: joi.string().optional().allow(null, ""),
   });
   return joiSchema.validate(requestParams);
 };

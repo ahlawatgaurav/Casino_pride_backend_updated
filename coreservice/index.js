@@ -1,13 +1,19 @@
-require("dotenv").config({ path: __dirname + "/.env" });
+// require("dotenv").config({ path: __dirname + "/.env" });
+const path = require("path");
+const dotenv = require("dotenv");
+console.log("🔥 SERVER FILE LOADED");
+
+const envFile =
+  process.env.NODE_ENV === "production"
+    ? ".env.production"
+    : ".env.local";
+
+dotenv.config({
+  path: path.join(__dirname, envFile),
+});
 
 const express = require("express");
 const app = express();
-
-const middlewareExcept = (fn, except) =>
-  (req, res, next) => {
-    if (except.includes(req.path)) next();
-    else fn(req, res, next);
-  };
 
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -18,10 +24,6 @@ const middleware = require("middleware");
 
 //project constants
 const logger = new appLib.Logger(null);
-
-//file upload
-const upload = require("./utils/fileUpload").FileUploadConfig;
-app.use(upload.array("File"));
 
 //routes
 
@@ -43,16 +45,13 @@ app.use(bodyParser.json({ type: "application/json" }));
 
 startAuthServer(logger);
 
-
-
 app.use(middleware.validateRequest);
-// app.use(middlewareExcept(middleware.validateRequest, ["/api/core/getUserByPhone"]));
 
-// const routes = require("./routes/index");
-// app.use("/api/core", routes);
+const routes = require("./routes/index");
+app.use("/api/core", routes);
 
-const coreServiceRoutes = require("./routes/index");
-app.use("/api/core", coreServiceRoutes);
+// const coreServiceRoutes = require("./routes/index");
+// app.use("/api/core", coreServiceRoutes);
 
 async function startAuthServer(log) {
   try {
@@ -71,4 +70,3 @@ async function startAuthServer(log) {
     log.logInfo("Error occured in starting AUTH SERVER. Need immediate check.");
   }
 }
-module.exports = app;

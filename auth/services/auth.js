@@ -23,8 +23,24 @@ const authService = {
       //   `loginUserDB() :: Returned Result :: ${JSON.stringify(rows[0][0])}`
       // );
 
+      const loginData = rows[0][0][0] ? rows[0][0][0] : null;
+
+      if (loginData?.userId && !loginData.CategoryName) {
+        const user = await dbconfig
+          .knex("users as u")
+          .leftJoin("CategoryMaster as cm", "cm.idCategoryMaster", "u.CategoryId")
+          .select("u.CategoryId", "cm.Category as CategoryName")
+          .where("u.Id", loginData.userId)
+          .first();
+
+        if (user) {
+          loginData.CategoryId = user.CategoryId;
+          loginData.CategoryName = user.CategoryName;
+        }
+      }
+
       return {
-        logindata: rows[0][0][0] ? rows[0][0][0] : null,
+        logindata: loginData,
         // userData: rows[0][0][1] ? rows[0][0][1] : null,
       };
     } catch (errLoginUser) {

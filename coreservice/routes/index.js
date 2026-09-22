@@ -13,17 +13,25 @@ const shiftsController = require("../controllers/shifts")
 const agentsettlementController = require("../controllers/agentSettlement")
 const mappingURLController = require("../controllers/mappingURL")
 const agentDiscountController = require("../controllers/agentDiscounts")
+const categoryDiscountController = require("../controllers/categoryDiscount");
+const categoryPackagesController = require("../controllers/categoryPackages");
+const reportsController = require("../controllers/reports");
+
+
 
 //user routes
-router.post("/user",applib.validateToken, userController.addUser);
-router.put("/user",applib.validateToken, userController.updateUser);
-router.delete("/user",applib.validateToken, userController.deleteUser);
-router.get("/user",applib.validateToken, userController.getUser);
-router.get("/addQRLink",applib.validateToken, userController.addQRLink);
+router.post("/user", applib.validateToken, userController.addUser);
+router.put("/user", applib.validateToken, userController.updateUser);
+router.delete("/user", applib.validateToken, userController.deleteUser);
+router.get("/user", applib.validateToken, userController.getUser);
+router.get("/usersByCategory", applib.validateToken, userController.usersByCategory);
+router.get("/addQRLink", applib.validateToken, userController.addQRLink);
 router.get("/getUserById", userController.getUserById);
+router.get("/getUserTypes", userController.getUserTypes);
+router.get("/getAgentByUUID", userController.getAgentByUUID);
 router.get("/getUserByPhone", userController.getUserByPhone);
 router.put("/countDriverBookings", userController.countDriverBookings);
-router.post("/uploadQRFile",applib.validateToken, userController.uploadQRFile);
+router.post("/uploadQRFile", applib.validateToken, userController.uploadQRFile);
 
 router.get("/hello", () => 'Hello');
 
@@ -38,6 +46,36 @@ router.delete("/websiteDiscount", websiteDiscountController.deleteWebsiteDiscoun
 // router.get("/websiteDiscount",applib.validateToken, websiteDiscountController.fetchWebsiteDiscount);
 router.get("/websiteDiscount", websiteDiscountController.fetchWebsiteDiscount);
 router.get("/enabledWebsiteDiscount", websiteDiscountController.fetchEnabledWebsiteDiscount);
+// Category Discounts
+router.get(
+  "/categories",
+  applib.validateToken,
+  categoryDiscountController.getAllCategories
+);
+
+router.post(
+  "/categories",
+  applib.validateToken,
+  categoryDiscountController.addCategory
+);
+
+router.put(
+  "/categoryDiscount",
+  applib.validateToken,
+  categoryDiscountController.updateCategoryDiscount
+);
+
+// Category -> Packages visibility management
+router.get(
+  "/categoryPackages",
+  applib.validateToken,
+  categoryPackagesController.getCategoryPackages
+);
+router.post(
+  "/categoryPackages",
+  applib.validateToken,
+  categoryPackagesController.updateCategoryPackages
+);
 
 
 //coupons
@@ -56,18 +94,18 @@ router.patch("/usedCoupon", couponController.updateUsedCoupons);
 
 
 //Packages
-router.get("/package",applib.validateToken, packageController.fetchPackages);
-router.post("/package",applib.validateToken, packageController.addPackage);
-router.put("/package",applib.validateToken, packageController.updatePackage);
-router.delete("/package",applib.validateToken, packageController.deletePackage);
-router.get("/getPackageDetails",applib.validateToken, packageController.getPackageDetails);
+router.get("/package", applib.validateToken, packageController.fetchPackages);
+router.post("/package", applib.validateToken, packageController.addPackage);
+router.put("/package", applib.validateToken, packageController.updatePackage);
+router.delete("/package", applib.validateToken, packageController.deletePackage);
+router.get("/getPackageDetails", applib.validateToken, packageController.getPackageDetails);
 
 //panel discount routes
-router.post("/panelDiscount",applib.validateToken, panelDiscountController.addPanelDiscount);
-router.put("/panelDiscount",applib.validateToken, panelDiscountController.updatePanelDiscount);
-router.delete("/panelDiscount",applib.validateToken, panelDiscountController.deletePanelDiscount);
-router.get("/panelDiscount",applib.validateToken, panelDiscountController.fetchPanelDiscount);
-router.get("/enabledPanelDiscounts",applib.validateToken, panelDiscountController.getEnabledPanelDiscounts);
+router.post("/panelDiscount", applib.validateToken, panelDiscountController.addPanelDiscount);
+router.put("/panelDiscount", applib.validateToken, panelDiscountController.updatePanelDiscount);
+router.delete("/panelDiscount", applib.validateToken, panelDiscountController.deletePanelDiscount);
+router.get("/panelDiscount", applib.validateToken, panelDiscountController.fetchPanelDiscount);
+router.get("/enabledPanelDiscounts", applib.validateToken, panelDiscountController.getEnabledPanelDiscounts);
 
 
 //Future Booking date routes
@@ -75,39 +113,45 @@ router.get("/enabledPanelDiscounts",applib.validateToken, panelDiscountControlle
 router.post("/futureBookingDate", futureBookingDateController.addUpdateFutureBookingDate);
 // router.get("/futureBookingDate",applib.validateToken, futureBookingDateController.fetchFutureBookingDate);
 router.get("/futureBookingDate", futureBookingDateController.fetchFutureBookingDate);
+router.delete("/futureBookingDate", futureBookingDateController.deleteBlockedDatePeriod);
 
 
 //Outlet
-router.post("/openOutlet",applib.validateToken, outletsController.openOutlet);
-router.post("/closeOutlet",applib.validateToken, outletsController.closeOutlet);
-router.get("/checkCurrentOutlet",applib.validateToken, outletsController.checkCurrentOutlet);
-router.get("/checkActiveOutlet",applib.validateToken, outletsController.checkActiveOutlet);
+router.post("/openOutlet", applib.validateToken, outletsController.openOutlet);
+router.post("/closeOutlet", applib.validateToken, outletsController.closeOutlet);
+router.get("/checkCurrentOutlet", applib.validateToken, outletsController.checkCurrentOutlet);
+router.get("/checkActiveOutlet", applib.validateToken, outletsController.checkActiveOutlet);
 
 //shifts
-router.get("/checkShiftForUser",applib.validateToken, shiftsController.checkShiftForUser);
-router.post("/openShift",applib.validateToken, shiftsController.openShift);
-router.post("/closeShift",applib.validateToken, shiftsController.closeShift);
-router.post("/reopenShift",applib.validateToken, shiftsController.reopenShift);
-router.get("/recentShiftForOutlet",applib.validateToken, shiftsController.recentShiftForOutlet);
+router.get("/checkShiftForUser", applib.validateToken, shiftsController.checkShiftForUser);
+router.post("/openShift", applib.validateToken, shiftsController.openShift);
+router.post("/closeShift", applib.validateToken, shiftsController.closeShift);
+router.post("/reopenShift", applib.validateToken, shiftsController.reopenShift);
+router.get("/recentShiftForOutlet", applib.validateToken, shiftsController.recentShiftForOutlet);
 
 //Agent Settlements
 router.post("/addUpdateAgentSettlement", agentsettlementController.addUpdateAgentSettlement);
-router.put("/agentMonthlySettlement",applib.validateToken, agentsettlementController.agentMonthlySettlement);
-router.get("/getAgentSettlements",applib.validateToken, agentsettlementController.getAgentSettlements);
+router.put("/agentMonthlySettlement", applib.validateToken, agentsettlementController.agentMonthlySettlement);
+router.get("/getAgentSettlements", applib.validateToken, agentsettlementController.getAgentSettlements);
+router.get("/getAgentSettlementTransactions", applib.validateToken, agentsettlementController.getAgentSettlementTransactions);
 
 
 //Url mapping Settlements
-router.post("/shortenURL",mappingURLController.shortenURL);
+router.post("/shortenURL", mappingURLController.shortenURL);
 router.get("/getLongURL", mappingURLController.getLongURL);
 
 
 //Agent Discount QR
-router.post("/agentDiscounts",applib.validateToken, agentDiscountController.addAgentDiscount);
-router.put("/agentDiscounts",applib.validateToken, agentDiscountController.updateAgentDiscount);
-router.get("/agentDiscounts",applib.validateToken, agentDiscountController.getAgentDiscount);
-router.get("/agentDiscountsUsingDiscountCode",applib.validateToken, agentDiscountController.getAgentDiscountUsingDiscountCode);
-router.post("/uploadAgentDiscountQRFile",applib.validateToken, agentDiscountController.uploadAgentDiscountQRFile);
+router.post("/agentDiscounts", applib.validateToken, agentDiscountController.addAgentDiscount);
+router.put("/agentDiscounts", applib.validateToken, agentDiscountController.updateAgentDiscount);
+router.get("/agentDiscounts", applib.validateToken, agentDiscountController.getAgentDiscount);
+router.get("/agentDiscountsUsingDiscountCode", applib.validateToken, agentDiscountController.getAgentDiscountUsingDiscountCode);
+router.post("/uploadAgentDiscountQRFile", applib.validateToken, agentDiscountController.uploadAgentDiscountQRFile);
 
 
+
+// Reports
+router.get("/agentReport", applib.validateToken, reportsController.getAgentReport);
+router.get("/agentsForFilter", applib.validateToken, reportsController.getAgentsForFilter);
 
 module.exports = router;

@@ -13,8 +13,9 @@
       this.GSTNumber = req.body.GSTNumber ? req.body.GSTNumber : null;
       this.governmentId = req.body.governmentId ? req.body.governmentId : null;
       this.totalGuestCount = req.body.totalGuestCount ? req.body.totalGuestCount : 0;
-      // this.numOfKids = req.body.numOfKids ? req.body.numOfKids : 0;
-      this.numOfTeens = req.body.numOfTeens ? req.body.numOfTeens : 0;
+      this.hasKids = req.body.hasKids !== undefined ? Number(req.body.hasKids) : 0;
+      this.numOfKids = req.body.numOfKids ? req.body.numOfKids : 0;
+      this.numOfTeens = req.body.numOfTeens ? req.body.numOfTeens : this.numOfKids;
       this.discountId = req.body.discountId ? req.body.discountId : 0;
       this.panelDiscountId = req.body.panelDiscountId ? req.body.panelDiscountId : 0;
       this.couponId = req.body.couponId ? req.body.couponId : 0;
@@ -29,6 +30,7 @@
       this.packageId = req.body.packageId ? req.body.packageId : null;
       this.packageName = req.body.packageName ? req.body.packageName : null;
       this.packageGuestCount = req.body.packageGuestCount ? req.body.packageGuestCount : null;
+      this.packageDiscounts = req.body.packageDiscounts ? req.body.packageDiscounts : null;
       this.packageWeekdayPrice = req.body.packageWeekdayPrice ? req.body.packageWeekdayPrice : null;
       this.packageWeekendPrice = req.body.packageWeekendPrice ? req.body.packageWeekendPrice : null;
       // this.ackFile = req.body.ackFile ? req.body.ackFile : null;
@@ -131,6 +133,7 @@
       this.packageId = req.body.packageId ? req.body.packageId : null;
       this.packageName = req.body.packageName ? req.body.packageName : null;
       this.packageGuestCount = req.body.packageGuestCount ? req.body.packageGuestCount : null;
+      this.packageDiscounts = req.body.packageDiscounts ? req.body.packageDiscounts : null;
       this.packageWeekdayPrice = req.body.packageWeekdayPrice ? req.body.packageWeekdayPrice : null;
       this.packageWeekendPrice = req.body.packageWeekendPrice ? req.body.packageWeekendPrice : null;
       this.shiftId = req.body.shiftId ? req.body.shiftId : 0;

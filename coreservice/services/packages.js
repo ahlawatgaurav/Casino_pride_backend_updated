@@ -18,8 +18,27 @@ const packageService = {
       // );
 
       // return rows[0][0] ? rows[0][0] : null;
+      let packageDetails = rows[0][0] ? rows[0][0] : null;
+
+      // Attach assigned CategoryIds to each package (for edit prefill).
+      if (packageDetails && packageDetails.length) {
+        const mappingRows = await dbconfig.knex("CategoryPackages")
+          .where({ IsEnabled: 1 })
+          .select("PackageId", "CategoryId");
+        const byPackage = {};
+        mappingRows.forEach((m) => {
+          (byPackage[m.PackageId] = byPackage[m.PackageId] || []).push(
+            m.CategoryId
+          );
+        });
+        packageDetails = packageDetails.map((p) => ({
+          ...p,
+          CategoryIds: byPackage[p.Id] || [],
+        }));
+      }
+
       return {
-        packageDetails: rows[0][0] ? rows[0][0] : null,
+        packageDetails: packageDetails,
         packageItemDetails: rows[0][1] ? rows[0][1] : null,
       };
     } catch (err) {
@@ -509,6 +528,72 @@ const packageService = {
       );
 
       throw functionContext.error;
+    }
+  },
+  // ---- Package-level channel + category mapping (knex, no SP) ----
+  setPackageChannels: async (functionContext, packageId, showInWebsite, showInAgentPanel) => {
+    let logger = functionContext.logger;
+    logger.logInfo("setPackageChannels() :: DB :: Invoked !");
+    try {
+      await dbconfig.knex("packages")
+        .where({ Id: Number(packageId) })
+        .update({
+          ShowInWebsite: showInWebsite ? 1 : 0,
+          ShowInAgentPanel: showInAgentPanel ? 1 : 0,
+        });
+    } catch (err) {
+      logger.logInfo(`setPackageChannels() :: Error :: ${JSON.stringify(err)}`);
+      functionContext.error = new errorModel.ErrorModel(
+        constant.errorMessage.dbError,
+        constant.errorCode.dbError
+      );
+      throw functionContext.error;
+    }
+  },
+  // Replace the set of categories this package is assigned to (whitelist membership).
+  setPackageCategories: async (functionContext, packageId, categoryIds) => {
+    let logger = functionContext.logger;
+    logger.logInfo("setPackageCategories() :: DB :: Invoked !");
+    const pkgId = Number(packageId);
+    const ids = Array.isArray(categoryIds)
+      ? [...new Set(categoryIds.map((id) => Number(id)).filter((id) => id > 0))]
+      : [];
+    try {
+      await dbconfig.knex.transaction(async (trx) => {
+        await trx("CategoryPackages").where({ PackageId: pkgId }).del();
+        if (ids.length) {
+          await trx("CategoryPackages").insert(
+            ids.map((cid) => ({
+              CategoryId: cid,
+              PackageId: pkgId,
+              IsEnabled: 1,
+              ShowInAgentPanel: 1,
+              ShowInWebsite: 0,
+            }))
+          );
+        }
+      });
+    } catch (err) {
+      logger.logInfo(`setPackageCategories() :: Error :: ${JSON.stringify(err)}`);
+      functionContext.error = new errorModel.ErrorModel(
+        constant.errorMessage.dbError,
+        constant.errorCode.dbError
+      );
+      throw functionContext.error;
+    }
+  },
+  // Returns array of CategoryIds this package is assigned to (for edit prefill).
+  getPackageCategories: async (functionContext, packageId) => {
+    let logger = functionContext.logger;
+    logger.logInfo("getPackageCategories() :: DB :: Invoked !");
+    try {
+      const rows = await dbconfig.knex("CategoryPackages")
+        .where({ PackageId: Number(packageId), IsEnabled: 1 })
+        .select("CategoryId");
+      return rows.map((r) => r.CategoryId);
+    } catch (err) {
+      logger.logInfo(`getPackageCategories() :: Error :: ${JSON.stringify(err)}`);
+      return [];
     }
   },
 };
